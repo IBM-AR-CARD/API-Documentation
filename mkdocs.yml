@@ -3,12 +3,12 @@ theme:
   name: 'material'
   language: 'en'
   logo: 
-    icon: 'account_balance'
+    icon: 'memory'
   palette:
-    primary: 'red'
-    accent: 'pink'
+    primary: 'deep purple'
+    accent: 'deep purple'
   feature:
-    tabs: true
+    tabs: false
 
 copyright: 'Copyright &copy; 2019 - 2020 UCL CS Team 13'
 

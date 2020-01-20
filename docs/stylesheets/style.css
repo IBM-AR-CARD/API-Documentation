@@ -6,7 +6,7 @@
 
 .md-typeset h2 {
     font-weight: 400;
-    color: #ef5350;
+    color: #3f51b5;
     margin-top: 5rem;
 }
 
@@ -26,7 +26,7 @@
 
 .md-typeset h3 {
     margin-top: 1.8rem;
-    color: #850000;
+    color: #252f66;
 }
 
 /* .md-typeset ul {
@@ -101,7 +101,7 @@
 
 
     .md-sidebar--primary  .md-nav__link--active, .md-sidebar--primary  [data-md-color-primary=red] .md-nav__link:active {
-        color: #ef5350;
+        color: #3f51b5;
         border: 1px solid transparent;
         cursor: pointer;
         display: flex;
