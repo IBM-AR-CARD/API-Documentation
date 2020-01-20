@@ -1,0 +1,28 @@
+site_name: IBM AR Business Card
+theme:
+  name: 'material'
+  language: 'en'
+  logo: 
+    icon: 'account_balance'
+  palette:
+    primary: 'red'
+    accent: 'pink'
+  feature:
+    tabs: true
+
+copyright: 'Copyright &copy; 2019 - 2020 UCL CS Team 13'
+
+markdown_extensions:
+    - markdown.extensions.admonition
+    - markdown.extensions.def_list
+    - markdown.extensions.toc:
+        permalink: true
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.magiclink:
+        repo_url_shorthand: true
+        user: squidfunk
+        repo: mkdocs-material
+
+extra_css:
+    - 'stylesheets/style.css'
