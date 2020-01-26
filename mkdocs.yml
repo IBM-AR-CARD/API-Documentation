@@ -1,28 +1,28 @@
-site_name: IBM AR Business Card
+site_name: AR Card API Documentation
 theme:
-  name: 'material'
-  language: 'en'
-  logo: 
-    icon: 'memory'
+  name: "material"
+  language: "en"
+  logo:
+    icon: "memory"
   palette:
-    primary: 'deep purple'
-    accent: 'deep purple'
+    primary: "deep purple"
+    accent: "deep purple"
   feature:
     tabs: false
 
-copyright: 'Copyright &copy; 2019 - 2020 UCL CS Team 13'
+copyright: "Copyright &copy; 2019 - 2020 UCL CS Team 13"
 
 markdown_extensions:
-    - markdown.extensions.admonition
-    - markdown.extensions.def_list
-    - markdown.extensions.toc:
-        permalink: true
-    - pymdownx.betterem:
-        smart_enable: all
-    - pymdownx.magiclink:
-        repo_url_shorthand: true
-        user: squidfunk
-        repo: mkdocs-material
+  - markdown.extensions.admonition
+  - markdown.extensions.def_list
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
 
 extra_css:
-    - 'stylesheets/style.css'
+  - "stylesheets/style.css"

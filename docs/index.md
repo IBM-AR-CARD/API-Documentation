@@ -1,15 +1,20 @@
-# Welcome to MkDocs
+# Welcome to IBM AR Card
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+Welcome to IBM AR Business Card's backend documentation. The backend app is built using:
 
-## Commands
+- [Node.js](https://nodejs.org/en/) + [Express.js](https://expressjs.com/)
+- [MongoDB](https://mongodb.com/)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+We are using cloud services include:
 
-## Project layout
+- [IBM Cloud](https://cloud.ibm.com/) provided by our client
+- [Watson Assistant](https://cloud.ibm.com/)
+- [Azure](https://azure.com) provided by UCL
+
+!!! tip "Source Code"
+    Source code for IBM AR Card API available at [IBM-AR-CARD/Backend-API](https://github.com/IBM-AR-CARD/Backend-API/).
+
+## Backend App layout
 
     mkdocs.yml    # The configuration file.
     docs/
