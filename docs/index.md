@@ -14,9 +14,9 @@ We are using cloud services include:
 !!! tip "Source Code"
     Source code for IBM AR Card API available at [IBM-AR-CARD/Backend-API](https://github.com/IBM-AR-CARD/Backend-API/).
 
-## Backend App layout
+<!-- ## Backend App layout
 
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        ...       # Other markdown pages, images and other files. -->
