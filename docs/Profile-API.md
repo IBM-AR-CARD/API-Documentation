@@ -4,7 +4,7 @@
 
 ### `POST` - /profile/get
 
-Use this request to return of the user's full profile in JSON.
+Use this request to return of the user's full profile in JSON. The URL of this endpoint is embedded in the QR code on the business card.
 
 <!-- !!! warning "Authorization"
     `none` -->
@@ -81,3 +81,14 @@ Use this request to return of the user's full profile in JSON.
     }
     ```
 
+### `GET` - /profile/get
+
+This request should not be used by the client, as the endpoint is prepared when the user scans the QR code using other app such as the camera app. 
+In such case the URL would be opend in a browser. A html page which invites the user to download our app would be returned.
+
+**Query Parameter(s)**:
+
+Same as the `POST` request above.
+
+!!! success
+    HTML page which invites the user to download the app.
