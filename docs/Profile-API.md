@@ -156,3 +156,38 @@ Same as the `POST` request above.
         "error": "<Error Message>"
     }
     ```
+
+
+
+
+
+
+
+## Create dummy profile data
+
+### `GET` - /profile/generate
+
+Use this request to generate 3 predefined user profiles (with `username`: `jonmcnamara`, `amy-pajak`, `ben-jones` respectively).
+
+!!! note "Note"
+    To use the dummy profile queried by the usernames above, you must generate it using this request first
+
+
+**Query Parameter(s)**: None
+
+
+
+---
+
+!!! success
+    Profile generated.
+
+    **Status Code**: `200 OK`
+
+    **Response Body**:
+
+    ```json
+    {
+      "status":"success"
+    }
+    ```
