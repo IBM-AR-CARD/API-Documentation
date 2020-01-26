@@ -1,0 +1,170 @@
+/*  
+ *  Gitbook like custom css for material mkdocs 
+ *  Author: Henry Zhang (henryz.cc)
+ */
+
+
+.md-typeset h2 {
+    font-weight: 400;
+    color: #3f51b5;
+    margin-top: 5rem;
+}
+
+.md-typeset h1{
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+
+.md-typeset h2+h3 {
+    margin-top: 2rem;
+}
+
+.md-typeset h1+h2 {
+    margin-top: 2rem;
+}
+
+.md-typeset h3 {
+    margin-top: 1.8rem;
+    color: #252f66;
+}
+
+/* .md-typeset ul {
+    list-style-type: none;
+}
+
+.md-typeset ul li::before {
+    content: "\2022";
+    color: red;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 24px;
+    line-height: 20px;
+  } */
+
+
+  .md-content__inner {
+      margin-bottom: 6em;
+ 
+  }
+
+
+  .md-main__inner{
+      padding-top: 0;
+  }
+
+  p{
+    font-size: 16px;
+    color:#3b454e;
+    padding-bottom: 20px ;
+  }
+
+  .admonition p{
+    padding-bottom: 0;
+  }
+
+  blockquote p{
+    padding-bottom: 0;
+  }
+
+
+  @media only screen and (min-width: 1220px) {
+    
+    .md-grid {
+        max-width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .md-header-nav.md-grid{
+        max-width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .md-tabs__inner.md-grid{
+        max-width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .md-sidebar{
+        padding-top: 3rem;
+        color: #626f7a;
+    }
+
+    .md-nav__link[data-md-state=blur] {
+        color: rgba(0,0,0,.24);
+    }
+
+
+    .md-sidebar--primary  .md-nav__link--active, .md-sidebar--primary  [data-md-color-primary=red] .md-nav__link:active {
+        color: #3f51b5;
+        border: 1px solid transparent;
+        cursor: pointer;
+        display: flex;
+        padding: 7px 24px 7px 16px;
+        position: relative;
+        align-items: center;
+        border-color: #E6ECF1 !important;
+        border-right: 0;
+        text-decoration: none;
+        background-color: #FFFFFF;
+        -webkit-box-align: center;
+    }
+
+    .md-sidebar--primary .md-nav__link{
+        font-weight: 800;
+        padding: 7px 24px 7px 16px;
+        line-height: 2em;
+    }
+
+    .md-sidebar--primary{
+        background-color: #F5F7F9;
+        border-right: 1px solid #E6ECF1;
+        margin-left: -15%;
+        width: 26%;
+        padding-left: 10%;
+    }
+
+    .md-sidebar--secondary {
+        margin-left: 85%;
+    }
+
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        margin: 0;
+    }
+
+    .md-sidebar--primary .md-nav__item {
+        padding: 0;
+        padding-left: .6rem;
+    }
+
+    .md-sidebar--primary .md-nav__link:hover{
+        background: rgb(230,237,240);
+        color:inherit;
+    }
+
+    .md-nav__title{
+        padding-bottom: 2em;
+        font-size: 18px;
+        color: gray;
+    }
+
+
+}
+
+
+/* fix right side bar */
+@media only screen and (min-width: 960px) {
+    .md-nav--secondary{
+        border-left: 1px solid #E6ECF1;
+        padding-left: 20px;
+    }
+}
+
+
+
+       
