@@ -265,6 +265,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#create-dummy-profile-data" title="Create dummy profile data" class="md-nav__link">
+    Create dummy profile data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-profilegenerate" title="GET - /profile/generate" class="md-nav__link">
+    GET - /profile/generate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -334,6 +354,26 @@
           <li class="md-nav__item">
   <a href="#post-profileupdate" title="POST - /profile/update" class="md-nav__link">
     POST - /profile/update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-dummy-profile-data" title="Create dummy profile data" class="md-nav__link">
+    Create dummy profile data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-profilegenerate" title="GET - /profile/generate" class="md-nav__link">
+    GET - /profile/generate
   </a>
   
 </li>
@@ -579,6 +619,26 @@ In such case the URL would be opend in a browser. A html page which invites the 
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error Message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h2 id="create-dummy-profile-data">Create dummy profile data<a class="headerlink" href="#create-dummy-profile-data" title="Permanent link">&para;</a></h2>
+<h3 id="get-profilegenerate"><code>GET</code> - /profile/generate<a class="headerlink" href="#get-profilegenerate" title="Permanent link">&para;</a></h3>
+<p>Use this request to generate 3 predefined user profiles (with <code>username</code>: <code>jonmcnamara</code>, <code>amy-pajak</code>, <code>ben-jones</code> respectively).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To use the dummy profile queried by the usernames above, you must generate it using this request first</p>
+</div>
+<p><strong>Query Parameter(s)</strong>: None</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Profile generated.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;success&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
