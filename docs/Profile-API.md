@@ -25,13 +25,13 @@ Use this request to return of the user's full profile in JSON. The URL of this e
 
 ```typescript
 {
-    username: string
+    _id: string
 }
 ```
 
-| Key        | Type     | Description                                    | Constraints | Default | Required |
-| ---------- | -------- | ---------------------------------------------- | ----------- | ------- | -------- |
-| `username` | `string` | User name of the sender. Sent from the client. | N/A         | N/A     | No       |
+| Key   | Type     | Description                                                   | Constraints | Default | Required |
+| ----- | -------- | ------------------------------------------------------------- | ----------- | ------- | -------- |
+| `_id` | `string` | MongoDb ObjectID of the request sender. Sent from the client. | N/A         | N/A     | No       |
 
 
 ---
