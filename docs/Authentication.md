@@ -2,7 +2,23 @@
 
 ## Overview
 
-We uses [JWT (Json Web Token)](https://jwt.io/) for user login and autehtications.
+We uses [JWT (Json Web Token)](https://jwt.io/) for user login and autehtications. 
+
+A JWT token will be assigned to the 
+client after the login request, the token is persistent unless the user log out manually. The token will be stored in 
+the database, up to 2 tokens can be generated, thus it means the user can sign in to 2 different devices (e.g. web and 
+mobile) at the same time. If additional device is logged in, the oldest token will be automatically invalidated, thus 
+the first device would be automatically logged out.
+
+Every user specific requests (e.g. log out, update profile, access favourites) would requrie the JWT Token be passed as 
+autorization in the request header. With key `Authorization` and value `Bearer <JWT-Token>`, example below.
+
+!!! example "`Authorization` Header Example"
+    ```
+    Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM0ODQ2YzllMjcxNTEwMmQyNDZiOWMiLCJpYXQiOjE1ODA1MjIzMzR9.2kafsTdABIemwiQN-sDfmHbdkOmPkz8fj_n_qGpxYKg
+    ```
+
+The user can access `logout-all` endpoint to invalidate all tokens at once.
 
 ## User Registration
 
@@ -193,6 +209,54 @@ Use this request to logout all devices of an existing user. This will invalidate
     ```json
     {
         "success": "You are logged out of all devices"
+    }
+    ```
+
+    | Key       | Type     | Description                                     |
+    | --------- | -------- | ----------------------------------------------- |
+    | `success` | `string` | Success message                                 |
+
+
+!!! failure "Unauthorized"
+    **Status Code**: `401 Unauthorized`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "You are not authorized to access this resource"
+    }
+    ```
+
+
+
+
+
+## JWT Test
+
+### `POST` - /user/test-token
+
+Test if a token is valid.
+
+!!! warning "Authorization"
+    JWT Token inside request header, with key `Authorization` and value `Bearer <JWT-Token>`
+
+
+**Request Body**: None
+
+
+---
+
+!!! success
+    The token is valid.
+
+    **Status Code**: `200 OK`
+
+    **Response Body**:
+
+    ```json
+    {
+        "success": "token valid"
     }
     ```
 
