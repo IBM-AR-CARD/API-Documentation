@@ -2,7 +2,7 @@
 
 ## Overview
 
-We uses [JWT (Json Web Token)](https://jwt.io/) for user login and autehtications. 
+We uses [JWT (Json Web Token)](https://jwt.io/) for user login and authentications. 
 
 A JWT token will be assigned to the 
 client after the login request, the token is persistent unless the user log out manually. The token will be stored in 
@@ -10,8 +10,12 @@ the database, up to 2 tokens can be generated, thus it means the user can sign i
 mobile) at the same time. If additional device is logged in, the oldest token will be automatically invalidated, thus 
 the first device would be automatically logged out.
 
-Every user specific requests (e.g. log out, update profile, access favourites) would requrie the JWT Token be passed as 
-autorization in the request header. With key `Authorization` and value `Bearer <JWT-Token>`, example below.
+The client application should be able to handle the invalid token. That's to say, when any request that requires 
+authorization returned `401 Unauthorized`, the app should immediately abandon any further request and perform logout 
+on the device, then prompt the user to log in again.
+
+Every user specific requests (e.g. logout, update profile, access favourites) would requrie the JWT Token be passed as 
+authorization in the request header. With key `Authorization` and value `Bearer <JWT-Token>`, example below.
 
 !!! example "`Authorization` Header Example"
     ```
@@ -19,6 +23,9 @@ autorization in the request header. With key `Authorization` and value `Bearer <
     ```
 
 The user can access `logout-all` endpoint to invalidate all tokens at once.
+
+
+
 
 ## User Registration
 
