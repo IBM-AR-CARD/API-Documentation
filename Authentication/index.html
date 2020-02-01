@@ -468,14 +468,17 @@
                 
                 <h1 id="user-authentication">User Authentication<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>We uses <a href="https://jwt.io/">JWT (Json Web Token)</a> for user login and autehtications. </p>
+<p>We uses <a href="https://jwt.io/">JWT (Json Web Token)</a> for user login and authentications. </p>
 <p>A JWT token will be assigned to the 
 client after the login request, the token is persistent unless the user log out manually. The token will be stored in 
 the database, up to 2 tokens can be generated, thus it means the user can sign in to 2 different devices (e.g. web and 
 mobile) at the same time. If additional device is logged in, the oldest token will be automatically invalidated, thus 
 the first device would be automatically logged out.</p>
-<p>Every user specific requests (e.g. log out, update profile, access favourites) would requrie the JWT Token be passed as 
-autorization in the request header. With key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code>, example below.</p>
+<p>The client application should be able to handle the invalid token. That's to say, when any request that requires 
+authorization returned <code>401 Unauthorized</code>, the app should immediately abandon any further request and perform logout 
+on the device, then prompt the user to log in again.</p>
+<p>Every user specific requests (e.g. logout, update profile, access favourites) would requrie the JWT Token be passed as 
+authorization in the request header. With key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code>, example below.</p>
 <div class="admonition example">
 <p class="admonition-title"><code>Authorization</code> Header Example</p>
 <div class="codehilite"><pre><span></span>Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM0ODQ2YzllMjcxNTEwMmQyNDZiOWMiLCJpYXQiOjE1ODA1MjIzMzR9.2kafsTdABIemwiQN-sDfmHbdkOmPkz8fj_n_qGpxYKg
