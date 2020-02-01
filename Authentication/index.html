@@ -292,6 +292,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jwt-test" title="JWT Test" class="md-nav__link">
+    JWT Test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-usertest-token" title="POST - /user/test-token" class="md-nav__link">
+    POST - /user/test-token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -409,6 +429,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jwt-test" title="JWT Test" class="md-nav__link">
+    JWT Test
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-usertest-token" title="POST - /user/test-token" class="md-nav__link">
+    POST - /user/test-token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -428,7 +468,21 @@
                 
                 <h1 id="user-authentication">User Authentication<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>We uses <a href="https://jwt.io/">JWT (Json Web Token)</a> for user login and autehtications.</p>
+<p>We uses <a href="https://jwt.io/">JWT (Json Web Token)</a> for user login and autehtications. </p>
+<p>A JWT token will be assigned to the 
+client after the login request, the token is persistent unless the user log out manually. The token will be stored in 
+the database, up to 2 tokens can be generated, thus it means the user can sign in to 2 different devices (e.g. web and 
+mobile) at the same time. If additional device is logged in, the oldest token will be automatically invalidated, thus 
+the first device would be automatically logged out.</p>
+<p>Every user specific requests (e.g. log out, update profile, access favourites) would requrie the JWT Token be passed as 
+autorization in the request header. With key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code>, example below.</p>
+<div class="admonition example">
+<p class="admonition-title"><code>Authorization</code> Header Example</p>
+<div class="codehilite"><pre><span></span>Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM0ODQ2YzllMjcxNTEwMmQyNDZiOWMiLCJpYXQiOjE1ODA1MjIzMzR9.2kafsTdABIemwiQN-sDfmHbdkOmPkz8fj_n_qGpxYKg
+</pre></div>
+
+</div>
+<p>The user can access <code>logout-all</code> endpoint to invalidate all tokens at once.</p>
 <h2 id="user-registration">User Registration<a class="headerlink" href="#user-registration" title="Permanent link">&para;</a></h2>
 <h3 id="post-userregister"><code>POST</code> - /user/register<a class="headerlink" href="#post-userregister" title="Permanent link">&para;</a></h3>
 <p>Use this request to register a new user.</p>
@@ -661,6 +715,52 @@
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;You are logged out of all devices&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>Success message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h2 id="jwt-test">JWT Test<a class="headerlink" href="#jwt-test" title="Permanent link">&para;</a></h2>
+<h3 id="post-usertest-token"><code>POST</code> - /user/test-token<a class="headerlink" href="#post-usertest-token" title="Permanent link">&para;</a></h3>
+<p>Test if a token is valid.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Request Body</strong>: None</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The token is valid.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;token valid&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
