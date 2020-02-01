@@ -36,7 +36,7 @@
     
     
       
-        <title>User Profile API - AR Card API Documentation</title>
+        <title>User Authentication - AR Card API Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#user-profile-api" tabindex="1" class="md-skip">
+      <a href="#user-authentication" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                User Profile API
+                User Authentication
               
             </span>
           
@@ -190,18 +190,6 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../Authentication/" title="User Authentication" class="md-nav__link">
-      User Authentication
-    </a>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
@@ -213,11 +201,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        User Profile API
+        User Authentication
       </label>
     
-    <a href="./" title="User Profile API" class="md-nav__link md-nav__link--active">
-      User Profile API
+    <a href="./" title="User Authentication" class="md-nav__link md-nav__link--active">
+      User Authentication
     </a>
     
       
@@ -231,23 +219,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-user-profile" title="Get User Profile" class="md-nav__link">
-    Get User Profile
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-registration" title="User Registration" class="md-nav__link">
+    User Registration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#post-profileget" title="POST - /profile/get" class="md-nav__link">
-    POST - /profile/get
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-profileget" title="GET - /profile/get" class="md-nav__link">
-    GET - /profile/get
+  <a href="#post-userregister" title="POST - /user/register" class="md-nav__link">
+    POST - /user/register
   </a>
   
 </li>
@@ -258,16 +246,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-user-profile" title="Update User Profile" class="md-nav__link">
-    Update User Profile
+  <a href="#user-login" title="User Login" class="md-nav__link">
+    User Login
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#post-profileupdate" title="POST - /profile/update" class="md-nav__link">
-    POST - /profile/update
+  <a href="#post-userlogin" title="POST - /user/login" class="md-nav__link">
+    POST - /user/login
   </a>
   
 </li>
@@ -278,16 +266,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-dummy-profile-data" title="Create dummy profile data" class="md-nav__link">
-    Create dummy profile data
+  <a href="#user-logout" title="User Logout" class="md-nav__link">
+    User Logout
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-profilegenerate" title="GET - /profile/generate" class="md-nav__link">
-    GET - /profile/generate
+  <a href="#post-userlogout" title="POST - /user/logout" class="md-nav__link">
+    POST - /user/logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-userlogout-all" title="POST - /user/logout-all" class="md-nav__link">
+    POST - /user/logout-all
   </a>
   
 </li>
@@ -305,6 +300,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Profile-API/" title="User Profile API" class="md-nav__link">
+      User Profile API
+    </a>
   </li>
 
     
@@ -329,23 +336,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-user-profile" title="Get User Profile" class="md-nav__link">
-    Get User Profile
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-registration" title="User Registration" class="md-nav__link">
+    User Registration
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#post-profileget" title="POST - /profile/get" class="md-nav__link">
-    POST - /profile/get
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-profileget" title="GET - /profile/get" class="md-nav__link">
-    GET - /profile/get
+  <a href="#post-userregister" title="POST - /user/register" class="md-nav__link">
+    POST - /user/register
   </a>
   
 </li>
@@ -356,16 +363,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#update-user-profile" title="Update User Profile" class="md-nav__link">
-    Update User Profile
+  <a href="#user-login" title="User Login" class="md-nav__link">
+    User Login
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#post-profileupdate" title="POST - /profile/update" class="md-nav__link">
-    POST - /profile/update
+  <a href="#post-userlogin" title="POST - /user/login" class="md-nav__link">
+    POST - /user/login
   </a>
   
 </li>
@@ -376,16 +383,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-dummy-profile-data" title="Create dummy profile data" class="md-nav__link">
-    Create dummy profile data
+  <a href="#user-logout" title="User Logout" class="md-nav__link">
+    User Logout
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#get-profilegenerate" title="GET - /profile/generate" class="md-nav__link">
-    GET - /profile/generate
+  <a href="#post-userlogout" title="POST - /user/logout" class="md-nav__link">
+    POST - /user/logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-userlogout-all" title="POST - /user/logout-all" class="md-nav__link">
+    POST - /user/logout-all
   </a>
   
 </li>
@@ -412,18 +426,24 @@
               
                 
                 
-                <h1 id="user-profile-api">User Profile API<a class="headerlink" href="#user-profile-api" title="Permanent link">&para;</a></h1>
-<h2 id="get-user-profile">Get User Profile<a class="headerlink" href="#get-user-profile" title="Permanent link">&para;</a></h2>
-<h3 id="post-profileget"><code>POST</code> - /profile/get<a class="headerlink" href="#post-profileget" title="Permanent link">&para;</a></h3>
-<p>Use this request to return of the user's full profile in JSON. The URL of this endpoint is embedded in the QR code on the business card.</p>
-<!-- !!! warning "Authorization"
-    `none` -->
+                <h1 id="user-authentication">User Authentication<a class="headerlink" href="#user-authentication" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>We uses <a href="https://jwt.io/">JWT (Json Web Token)</a> for user login and autehtications.</p>
+<h2 id="user-registration">User Registration<a class="headerlink" href="#user-registration" title="Permanent link">&para;</a></h2>
+<h3 id="post-userregister"><code>POST</code> - /user/register<a class="headerlink" href="#post-userregister" title="Permanent link">&para;</a></h3>
+<p>Use this request to register a new user.</p>
+<p><strong>Request Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="c1">// min length 3, max length 25</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="nb">String</span> <span class="c1">// min length 5, max length 25</span>
+<span class="p">}</span>
+</pre></div>
 
-<p><strong>Query Parameter(s)</strong>:</p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Key</th>
 <th>Type</th>
 <th>Description</th>
 <th>Constraints</th>
@@ -435,222 +455,238 @@
 <tr>
 <td><code>username</code></td>
 <td><code>string</code></td>
-<td>Username of the profile being reuqested</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>One of two is required</td>
-</tr>
-<tr>
-<td><code>_id</code></td>
-<td><code>string</code></td>
-<td>User's MongoDb id</td>
-<td>MongoDb ObjectID Type</td>
-<td>N/A</td>
-<td>One of two is required</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Example</p>
-<p><code>/profile/get?username=jonmcnamara</code></p>
-</div>
-<p><strong>Request Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nx">_id</span>: <span class="kt">string</span>
-<span class="p">}</span>
-</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Constraints</th>
-<th>Default</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>_id</code></td>
-<td><code>string</code></td>
-<td>MongoDb ObjectID of the request sender. Sent from the client.</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>The user can be found using the query and have a full profile.</p>
-<p><strong>Status Code</strong>: <code>200 OK</code></p>
-<p><strong>Response Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="err">_id:</span> <span class="nt">&quot;xxxxxxxxxx&quot;</span><span class="p">,</span>
-  <span class="err">dummyid:</span> <span class="nt">&quot;dummy1&quot;</span><span class="p">,</span>
-  <span class="err">username:</span> <span class="nt">&quot;jonmcnamara&quot;</span><span class="p">,</span>
-  <span class="err">profile:</span>
-    <span class="nt">&quot;https://media-exp2.licdn.com/dms/image/C5603AQFA_oQhi6-2Cg/profile-displayphoto-shrink_800_800/0?e=1584576000&amp;v=beta&amp;t=QfVEJg5DU7IHXBiUlaZ2nRjI5gHTqok20eL17iHHa8Y&quot;</span><span class="p">,</span>
-  <span class="err">firstname:</span> <span class="nt">&quot;John&quot;</span><span class="p">,</span>
-  <span class="err">lastname:</span> <span class="nt">&quot;McNamara&quot;</span><span class="p">,</span>
-  <span class="err">description:</span>
-    <span class="nt">&quot;John is a Senior Inventor, Research Fellow, Impact Fellow and currently provides technical leadership for the IBM Hursley Innovation Centre. John has a diverse background that includes consultancy, performance, service &amp; product delivery, all underpinned by a passion for innovation. Most recently his work leading the Innovation Centre technologist team has allowed him to combine these interests in order to maximise the potential of new technology while solving real problems. John has overseen the delivery of many cognitive cloud-based solutions and understands how to combine technologies to quickly provide value for customers. John is an active inventor with an invention portfolio spanning mobile, A.I, messaging, integration and predictive analytics.&quot;</span><span class="p">,</span>
-  <span class="err">experience:</span>
-    <span class="nt">&quot;Senior Inventor at IBM and Hursley Innovation Labs Technologist Lead&quot;</span><span class="p">,</span>
-  <span class="err">education:</span>
-    <span class="nt">&quot;I have studied at University of Humberside, on Field Of StudyInformation Systems. And received a 2:1 Grade&quot;</span><span class="p">,</span>
-  <span class="err">gender:</span> <span class="err">2</span>
-<span class="p">}</span>
-</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>_id</code></td>
-<td><code>string</code></td>
-<td>MongoDB ObjectID</td>
-</tr>
-<tr>
-<td><code>dummyid</code></td>
-<td><code>string</code></td>
-<td>Exists if the user is dummy data.</td>
-</tr>
-<tr>
-<td><code>username</code></td>
-<td><code>string</code></td>
-<td>Unique identifier</td>
-</tr>
-<tr>
-<td><code>profile</code></td>
-<td><code>string</code></td>
-<td>Profile picture image Url</td>
-</tr>
-<tr>
-<td><code>gender</code></td>
-<td><code>integer</code></td>
-<td>0 - Unset, 1 - Female, 2 - Male</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">User not found</p>
-<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
-<p><strong>Response Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;not-found&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-<h3 id="get-profileget"><code>GET</code> - /profile/get<a class="headerlink" href="#get-profileget" title="Permanent link">&para;</a></h3>
-<p>This request should not be used by the client, as the endpoint is prepared when the user scans the QR code using other app such as the camera app. 
-In such case the URL would be opend in a browser. A html page which invites the user to download our app would be returned.</p>
-<p><strong>Query Parameter(s)</strong>:</p>
-<p>Same as the <code>POST</code> request above.</p>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>HTML page which invites the user to download the app.</p>
-</div>
-<h2 id="update-user-profile">Update User Profile<a class="headerlink" href="#update-user-profile" title="Permanent link">&para;</a></h2>
-<h3 id="post-profileupdate"><code>POST</code> - /profile/update<a class="headerlink" href="#post-profileupdate" title="Permanent link">&para;</a></h3>
-<p><strong>Request Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-      <span class="nx">_id</span><span class="o">:</span> <span class="s2">&quot;xxxxxxxxxx&quot;</span><span class="p">,</span>
-      <span class="nx">dummyid</span><span class="o">:</span> <span class="s2">&quot;dummy1&quot;</span><span class="p">,</span>
-      <span class="nx">username</span><span class="o">:</span> <span class="s2">&quot;jonmcnamara&quot;</span><span class="p">,</span>
-      <span class="nx">profile</span><span class="o">:</span>
-        <span class="s2">&quot;https://media-exp2.licdn.com/dms/image/C5603AQFA_oQhi6-2Cg/profile-displayphoto-shrink_800_800/0?e=1584576000&amp;v=beta&amp;t=QfVEJg5DU7IHXBiUlaZ2nRjI5gHTqok20eL17iHHa8Y&quot;</span><span class="p">,</span>
-      <span class="nx">firstname</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-      <span class="nx">lastname</span><span class="o">:</span> <span class="s2">&quot;McNamara&quot;</span><span class="p">,</span>
-      <span class="nx">description</span><span class="o">:</span>
-        <span class="s2">&quot;John is a Senior Inventor, Research Fellow, Impact Fellow and currently provides technical leadership for the IBM Hursley Innovation Centre. John has a diverse background that includes consultancy, performance, service &amp; product delivery, all underpinned by a passion for innovation. Most recently his work leading the Innovation Centre technologist team has allowed him to combine these interests in order to maximise the potential of new technology while solving real problems. John has overseen the delivery of many cognitive cloud-based solutions and understands how to combine technologies to quickly provide value for customers. John is an active inventor with an invention portfolio spanning mobile, A.I, messaging, integration and predictive analytics.&quot;</span><span class="p">,</span>
-      <span class="nx">experience</span><span class="o">:</span>
-        <span class="s2">&quot;Senior Inventor at IBM and Hursley Innovation Labs Technologist Lead&quot;</span><span class="p">,</span>
-      <span class="nx">education</span><span class="o">:</span>
-        <span class="s2">&quot;I have studied at University of Humberside, on Field Of StudyInformation Systems. And received a 2:1 Grade&quot;</span><span class="p">,</span>
-      <span class="nx">gender</span>: <span class="kt">2</span>
-    <span class="p">}</span>
-</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Constraints</th>
-<th>Default</th>
-<th>Required</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>_id</code></td>
-<td><code>string</code></td>
-<td>User's MongoDb id</td>
-<td>MongoDb ObjectID Type</td>
+<td>Unique username.</td>
+<td>min length 3, max length 25</td>
 <td>N/A</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Other fields</td>
+<td><code>email</code></td>
+<td><code>string</code></td>
+<td>Unique E-mail. Different from contact e-mail</td>
+<td>Email format</td>
 <td>N/A</td>
-<td>Any other changed fields, or full profile</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td><code>string</code></td>
+<td>Plain text password</td>
+<td>min length 5, max length 25</td>
 <td>N/A</td>
-<td>N/A</td>
-<td>No</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>The user can be found using the query and can be updated.</p>
+<p>The user can be registered.</p>
 <p><strong>Status Code</strong>: <code>200 OK</code></p>
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;success&quot;</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully regisered, you can now log in.&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>Success message</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="admonition failure">
-<p class="admonition-title">User not found or cannot be updated</p>
+<p class="admonition-title">Invalid credentials</p>
 <p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error Message&gt;&quot;</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
 </div>
-<h2 id="create-dummy-profile-data">Create dummy profile data<a class="headerlink" href="#create-dummy-profile-data" title="Permanent link">&para;</a></h2>
-<h3 id="get-profilegenerate"><code>GET</code> - /profile/generate<a class="headerlink" href="#get-profilegenerate" title="Permanent link">&para;</a></h3>
-<p>Use this request to generate 3 predefined user profiles (with <code>username</code>: <code>jonmcnamara</code>, <code>amy-pajak</code>, <code>ben-jones</code> respectively).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To use the dummy profile queried by the usernames above, you must generate it using this request first</p>
-</div>
-<p><strong>Query Parameter(s)</strong>: None</p>
+<h2 id="user-login">User Login<a class="headerlink" href="#user-login" title="Permanent link">&para;</a></h2>
+<h3 id="post-userlogin"><code>POST</code> - /user/login<a class="headerlink" href="#post-userlogin" title="Permanent link">&para;</a></h3>
+<p>Use this request to login an existing user.</p>
+<p><strong>Request Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> 
+    <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="nb">String</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td><code>string</code></td>
+<td>Unique E-mail. Different from contact e-mail</td>
+<td>Email format</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td><code>string</code></td>
+<td>Plain text password</td>
+<td>min length 5, max length 25</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <div class="admonition success">
 <p class="admonition-title">Success</p>
-<p>Profile generated.</p>
+<p>The user can be logged in.</p>
 <p><strong>Status Code</strong>: <code>200 OK</code></p>
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="s2">&quot;success&quot;</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully logged in.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;JWT Token&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>Success message</td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td><code>string</code></td>
+<td>JWT Token of the user, this token is persistent</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Invalid credentials</p>
+<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h2 id="user-logout">User Logout<a class="headerlink" href="#user-logout" title="Permanent link">&para;</a></h2>
+<h3 id="post-userlogout"><code>POST</code> - /user/logout<a class="headerlink" href="#post-userlogout" title="Permanent link">&para;</a></h3>
+<p>Use this request to logout an existing user. This will invalidate the JWT token passed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Request Body</strong>: None</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The user can be logged out.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;You are logged out&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>Success message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h3 id="post-userlogout-all"><code>POST</code> - /user/logout-all<a class="headerlink" href="#post-userlogout-all" title="Permanent link">&para;</a></h3>
+<p>Use this request to logout all devices of an existing user. This will invalidate ALL JWT tokens stored in the server.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Request Body</strong>: None</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The user can be logged out.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;You are logged out of all devices&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>Success message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -675,7 +711,7 @@ In such case the URL would be opend in a browser. A html page which invites the 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Authentication/" title="User Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Welcome to IBM AR Card" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -684,11 +720,25 @@ In such case the URL would be opend in a browser. A html page which invites the 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                User Authentication
+                Welcome to IBM AR Card
               </span>
             </div>
           </a>
         
+        
+          <a href="../Profile-API/" title="User Profile API" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                User Profile API
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
