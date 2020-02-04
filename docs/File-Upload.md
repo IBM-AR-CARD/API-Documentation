@@ -55,3 +55,14 @@ Please put the raw file into the request header.
         "error": "<Error message>"
     }
     ```
+
+!!! failure "Unauthorized"
+    **Status Code**: `401 Unauthorized`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "You are not authorized to access this resource"
+    }
+    ```

@@ -2,33 +2,68 @@
 
 ## Get history
 
-### `POST` - /history/get
+### `GET` - /history/get
 
 Use this request to return the list of user history.
 
-<!-- !!! warning "Authorization"
-    `none` -->
+!!! warning "Authorization"
+    JWT Token inside request header, with key `Authorization` and value `Bearer <JWT-Token>`
 
 
-**Query Parameter(s)**:
-
-| Parameter  | Type     | Description                             | Constraints           | Default | Required               |
-| ---------- | -------- | --------------------------------------- | --------------------- | ------- | ---------------------- |
-| `username` | `string` | Username of the profile being reuqested | N/A                   | N/A     | One of two is required |
-| `_id`      | `string` | User's MongoDb id                       | MongoDb ObjectID Type | N/A     | One of two is required |
-
-!!! note "Example"
-    `/profile/get?username=jonmcnamara`
+**Query Parameter(s)**: none
 
 
-**Request Body**:
+**Request Body**: none
 
-```typescript
-{
-    _id: string
-}
-```
 
-| Key   | Type     | Description                                                   | Constraints | Default | Required |
-| ----- | -------- | ------------------------------------------------------------- | ----------- | ------- | -------- |
-| `_id` | `string` | MongoDb ObjectID of the request sender. Sent from the client. | N/A         | N/A     | No       |
+---
+
+!!! success
+    The history can be returned.
+
+    **Status Code**: `200 OK`
+
+    **Response Body**:
+
+    ```json
+    {
+        "_id": "<History Storage ID, not usable>",
+        "userid": "<User ID>",
+        "history": [
+            {
+                "name": "<History user name>",
+                "description": "<History user description>",
+                "avatar": "<History user profile URL>",
+            },
+            ...
+        ]
+    }
+    ```
+
+    | Key       | Type     | Description           |
+    | --------- | -------- | --------------------- |
+    | `userid`  | `string` | User ID               |
+    | `history` | `List`   | List of history items |
+
+
+!!! failure "Bad Request"
+    **Status Code**: `400 Bad Request`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "<Error message>"
+    }
+    ```
+
+!!! failure "Unauthorized"
+    **Status Code**: `401 Unauthorized`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "You are not authorized to access this resource"
+    }
+    ```

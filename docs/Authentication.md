@@ -10,19 +10,27 @@ the database, up to 2 tokens can be generated, thus it means the user can sign i
 mobile) at the same time. If additional device is logged in, the oldest token will be automatically invalidated, thus 
 the first device would be automatically logged out.
 
+The user can access `logout-all` endpoint to invalidate all tokens at once, achieving logging out of all devices.
+
 The client application should be able to handle the invalid token. That's to say, when any request that requires 
 authorization returned `401 Unauthorized`, the app should immediately abandon any further request and perform logout 
 on the device, then prompt the user to log in again.
 
-Every user specific requests (e.g. logout, update profile, access favourites) would requrie the JWT Token be passed as 
-authorization in the request header. With key `Authorization` and value `Bearer <JWT-Token>`, example below.
 
-!!! example "`Authorization` Header Example"
+!!! warning "Authorization Header"
+    Every user specific requests (e.g. logout, update profile, access favourites) would requrie the JWT Token be passed as 
+    authorization in the request header. With key - `Authorization` and value - `Bearer <JWT-Token>`, example below.
+
+    | Key             | Value     |
+    | --------------- | --------- | 
+    | `Authorization` | `Bearer <JWT-Token>` |
+
+    JWT-Token should look like (with `Bearer `):
     ```
     Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTM0ODQ2YzllMjcxNTEwMmQyNDZiOWMiLCJpYXQiOjE1ODA1MjIzMzR9.2kafsTdABIemwiQN-sDfmHbdkOmPkz8fj_n_qGpxYKg
     ```
 
-The user can access `logout-all` endpoint to invalidate all tokens at once.
+
 
 
 

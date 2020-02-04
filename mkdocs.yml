@@ -36,6 +36,13 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.superfences
 
+nav:
+  - Welcome: index.md
+  - User Authentication: Authentication.md
+  - User Profile: Profile-API.md
+  - History Cards: History-API.md
+  - File Upload: File-Upload.md
+
 extra_css:
   - "stylesheets/style.css"
 
