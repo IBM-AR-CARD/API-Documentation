@@ -35,18 +35,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>AR Card API Documentation</title>
+        <title>History Cards - AR Card API Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -55,7 +55,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -64,10 +64,10 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="stylesheets/style.css">
+      <link rel="stylesheet" href="../stylesheets/style.css">
     
     
       
@@ -116,7 +116,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-ibm-ar-card" tabindex="1" class="md-skip">
+      <a href="#history-api" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -125,7 +125,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="AR Card API Documentation" class="md-header-nav__button md-logo">
+        <a href=".." title="AR Card API Documentation" class="md-header-nav__button md-logo">
           
             <i class="md-icon">memory</i>
           
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Welcome
+                History Cards
               
             </span>
           
@@ -217,7 +217,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="AR Card API Documentation" class="md-nav__button md-logo">
+    <a href=".." title="AR Card API Documentation" class="md-nav__button md-logo">
       
         <i class="md-icon">memory</i>
       
@@ -251,20 +251,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="." title="Welcome" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href=".." title="Welcome" class="md-nav__link">
       Welcome
     </a>
-    
   </li>
 
     
@@ -274,7 +265,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Authentication/" title="User Authentication" class="md-nav__link">
+    <a href="../Authentication/" title="User Authentication" class="md-nav__link">
       User Authentication
     </a>
   </li>
@@ -286,7 +277,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Profile-API/" title="User Profile" class="md-nav__link">
+    <a href="../Profile-API/" title="User Profile" class="md-nav__link">
       User Profile
     </a>
   </li>
@@ -296,11 +287,62 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="History-API/" title="History Cards" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        History Cards
+      </label>
+    
+    <a href="./" title="History Cards" class="md-nav__link md-nav__link--active">
       History Cards
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-history" title="Get history" class="md-nav__link">
+    Get history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-historyget" title="GET - /history/get" class="md-nav__link">
+    GET - /history/get
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -310,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="File-Upload/" title="File Upload" class="md-nav__link">
+    <a href="../File-Upload/" title="File Upload" class="md-nav__link">
       File Upload
     </a>
   </li>
@@ -333,6 +375,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-history" title="Get history" class="md-nav__link">
+    Get history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-historyget" title="GET - /history/get" class="md-nav__link">
+    GET - /history/get
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -343,31 +414,82 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/IBM-AR-CARD/API-Documentation/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/IBM-AR-CARD/API-Documentation/edit/master/docs/History-API.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="welcome-to-ibm-ar-card">Welcome to IBM AR Card<a class="headerlink" href="#welcome-to-ibm-ar-card" title="Permanent link">&para;</a></h1>
-<p>Welcome to IBM AR Business Card's backend documentation. The backend app is built using:</p>
-<ul>
-<li><a href="https://nodejs.org/en/">Node.js</a> + <a href="https://expressjs.com/">Express.js</a></li>
-<li><a href="https://mongodb.com/">MongoDB</a></li>
-</ul>
-<p>We are using cloud services include:</p>
-<ul>
-<li><a href="https://cloud.ibm.com/">IBM Cloud</a> provided by our client</li>
-<li><a href="https://cloud.ibm.com/">Watson Assistant</a></li>
-<li><a href="https://azure.com">Azure</a> provided by UCL</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Source Code</p>
-<p>Source code for IBM AR Card API available at <a href="https://github.com/IBM-AR-CARD/Backend-API/">IBM-AR-CARD/Backend-API</a>.</p>
+                <h1 id="history-api">History API<a class="headerlink" href="#history-api" title="Permanent link">&para;</a></h1>
+<h2 id="get-history">Get history<a class="headerlink" href="#get-history" title="Permanent link">&para;</a></h2>
+<h3 id="get-historyget"><code>GET</code> - /history/get<a class="headerlink" href="#get-historyget" title="Permanent link">&para;</a></h3>
+<p>Use this request to return the list of user history.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
 </div>
-<!-- ## Backend App layout
+<p><strong>Query Parameter(s)</strong>: none</p>
+<p><strong>Request Body</strong>: none</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The history can be returned.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History Storage ID, not usable&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;userid&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;User ID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;history&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History item user id&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user name&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user description&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user profile URL&gt;&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userid</code></td>
+<td><code>string</code></td>
+<td>User ID</td>
+</tr>
+<tr>
+<td><code>history</code></td>
+<td><code>List</code></td>
+<td>List of history items</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Bad Request</p>
+<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
                 
                   
                 
@@ -388,14 +510,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../Profile-API/" title="User Profile" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                User Profile
+              </span>
+            </div>
+          </a>
         
-          <a href="Authentication/" title="User Authentication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../File-Upload/" title="File Upload" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                User Authentication
+                File Upload
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -427,9 +563,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.245445c6.js"></script>
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
     
   </body>
