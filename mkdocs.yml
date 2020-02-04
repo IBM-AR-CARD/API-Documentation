@@ -1,4 +1,7 @@
 site_name: AR Card API Documentation
+site_description: API Documentation for IBM AR Business Card
+site_author: UCL Computer Science System Engineering 2020 Team 13
+
 theme:
   name: "material"
   language: "en"
@@ -9,6 +12,9 @@ theme:
     accent: "deep purple"
   feature:
     tabs: false
+
+repo_name: IBM-AR-CARD/API-Doc
+repo_url: https://github.com/IBM-AR-CARD/API-Documentation/
 
 copyright: "Copyright &copy; 2019 - 2020 UCL CS Team 13"
 
