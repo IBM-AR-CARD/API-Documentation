@@ -21,8 +21,8 @@ on the device, then prompt the user to log in again.
     Every user specific requests (e.g. logout, update profile, access favourites) would requrie the JWT Token be passed as 
     authorization in the request header. With key - `Authorization` and value - `Bearer <JWT-Token>`, example below.
 
-    | Key             | Value     |
-    | --------------- | --------- | 
+    | Key             | Value                |
+    | --------------- | -------------------- | 
     | `Authorization` | `Bearer <JWT-Token>` |
 
     JWT-Token should look like (with `Bearer `):

@@ -31,6 +31,7 @@ Use this request to return the list of user history.
         "userid": "<User ID>",
         "history": [
             {
+                "_id": "<History item user id>",
                 "name": "<History user name>",
                 "description": "<History user description>",
                 "avatar": "<History user profile URL>",
