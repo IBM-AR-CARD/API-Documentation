@@ -4,8 +4,7 @@
 
 ### `POST` - /upload
 
-Upload image or audio file into the backend server, please name the filename carefully before upload, 
-as this will be the file name stored on the server, file with the same name will be overwritten.
+Upload image or audio file into the backend server. The file will be stored in the user's respective folder. Please name the filename carefully before upload, as this will be the file name stored on the server, file with the same name uploaded by the same user will be overwritten.
 
 !!! warning "Authorization"
     JWT Token inside request header, with key `Authorization` and value `Bearer <JWT-Token>`
@@ -66,3 +65,17 @@ Please put the raw file into the request header.
         "error": "You are not authorized to access this resource"
     }
     ```
+
+
+
+
+## Standard file names
+
+The following are the example file names of common files shared between the client and the server.
+
+| File name             | Description                                                        | File type |
+| --------------------- | ------------------------------------------------------------------ | --------- |
+| `profile.png`         | `Image for user's profile picture`                                 | `png`     |
+| `education.mp3`       | `User's recording file for their education section`                | `mp3`     |
+| `description.mp3`     | `User's recording file for their one sentence description section` | `mp3`     |
+| `work-experience.mp3` | `User's recording file for their work experiences section`         | `mp3`     |
