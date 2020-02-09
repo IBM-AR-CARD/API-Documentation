@@ -40,7 +40,7 @@
     
     
       
-        <title>History Cards - AR Card API Documentation</title>
+        <title>User History Cards - AR Card API Documentation</title>
       
     
     
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                History Cards
+                User History Cards
               
             </span>
           
@@ -298,11 +298,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        History Cards
+        User History Cards
       </label>
     
-    <a href="./" title="History Cards" class="md-nav__link md-nav__link--active">
-      History Cards
+    <a href="./" title="User History Cards" class="md-nav__link md-nav__link--active">
+      User History Cards
     </a>
     
       
@@ -335,6 +335,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add-to-history" title="Add to history" class="md-nav__link">
+    Add to history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-historyadd" title="POST - /history/add" class="md-nav__link">
+    POST - /history/add
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-from-history" title="Remove from history" class="md-nav__link">
+    Remove from history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-historyremove" title="POST - /history/remove" class="md-nav__link">
+    POST - /history/remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-historyremove-all" title="POST - /history/remove-all" class="md-nav__link">
+    POST - /history/remove-all
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -343,6 +390,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Favorite-API/" title="User Favourite Cards" class="md-nav__link">
+      User Favourite Cards
+    </a>
   </li>
 
     
@@ -398,6 +457,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#add-to-history" title="Add to history" class="md-nav__link">
+    Add to history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-historyadd" title="POST - /history/add" class="md-nav__link">
+    POST - /history/add
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-from-history" title="Remove from history" class="md-nav__link">
+    Remove from history
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-historyremove" title="POST - /history/remove" class="md-nav__link">
+    POST - /history/remove
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-historyremove-all" title="POST - /history/remove-all" class="md-nav__link">
+    POST - /history/remove-all
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -420,7 +526,7 @@
                 <h1 id="history-api">History API<a class="headerlink" href="#history-api" title="Permanent link">&para;</a></h1>
 <h2 id="get-history">Get history<a class="headerlink" href="#get-history" title="Permanent link">&para;</a></h2>
 <h3 id="get-historyget"><code>GET</code> - /history/get<a class="headerlink" href="#get-historyget" title="Permanent link">&para;</a></h3>
-<p>Use this request to return the list of user history.</p>
+<p>Use this request to return a history list of cards the user have scanned.</p>
 <div class="admonition warning">
 <p class="admonition-title">Authorization</p>
 <p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
@@ -435,13 +541,14 @@
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History Storage ID, not usable&gt;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;userid&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;User ID&gt;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;userid&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;User ID of the history owner&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;history&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History item user id&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History item id, with time info&gt;&quot;</span><span class="p">,</span>
             <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user name&gt;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user description&gt;&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;History user profile URL&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;userid&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Current item user id&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Profile avatar url&gt;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Current item user name&gt;&quot;</span><span class="p">,</span>
         <span class="p">},</span>
         <span class="err">...</span>
     <span class="p">]</span>
@@ -466,6 +573,231 @@
 <td><code>history</code></td>
 <td><code>List</code></td>
 <td>List of history items</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Bad Request</p>
+<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h2 id="add-to-history">Add to history<a class="headerlink" href="#add-to-history" title="Permanent link">&para;</a></h2>
+<h3 id="post-historyadd"><code>POST</code> - /history/add<a class="headerlink" href="#post-historyadd" title="Permanent link">&para;</a></h3>
+<p>Use this request to add a single item into the user's history list. Any existing history of this particular
+ id will be overwritten (i.e. only one history entry per each user, only newest entry is kept).</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Query Parameter(s)</strong>: none</p>
+<p><strong>Request Body</strong>: </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">userid</span>: <span class="kt">string</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userid</code></td>
+<td><code>string</code></td>
+<td>MongoDb ObjectID of the history item (an viewed user) to add</td>
+<td>MongoDb ObjectID Type</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The history can be added.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;history updated&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>success message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Bad Request</p>
+<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h2 id="remove-from-history">Remove from history<a class="headerlink" href="#remove-from-history" title="Permanent link">&para;</a></h2>
+<h3 id="post-historyremove"><code>POST</code> - /history/remove<a class="headerlink" href="#post-historyremove" title="Permanent link">&para;</a></h3>
+<p>Use this request to remove a single entry from the history.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Query Parameter(s)</strong>: none</p>
+<p><strong>Request Body</strong>: </p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nx">userid</span>: <span class="kt">string</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+<th>Constraints</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>userid</code></td>
+<td><code>string</code></td>
+<td>MongoDb ObjectID of the history item (an viewed user) to remove</td>
+<td>MongoDb ObjectID Type</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The history is removed if the userid provided is correct.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;history might be removed&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>success message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Bad Request</p>
+<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Unauthorized</p>
+<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+<h3 id="post-historyremove-all"><code>POST</code> - /history/remove-all<a class="headerlink" href="#post-historyremove-all" title="Permanent link">&para;</a></h3>
+<p>Use this request to remove all entries from the history list.</p>
+<div class="admonition warning">
+<p class="admonition-title">Authorization</p>
+<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
+</div>
+<p><strong>Query Parameter(s)</strong>: none</p>
+<p><strong>Request Body</strong>: none</p>
+<hr />
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>The history is cleared.</p>
+<p><strong>Status Code</strong>: <code>200 OK</code></p>
+<p><strong>Response Body</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;history is cleared&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>success</code></td>
+<td><code>string</code></td>
+<td>success message</td>
 </tr>
 </tbody>
 </table>
@@ -525,13 +857,13 @@
           </a>
         
         
-          <a href="../File-Upload/" title="File Upload" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Favorite-API/" title="User Favourite Cards" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                File Upload
+                User Favourite Cards
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
