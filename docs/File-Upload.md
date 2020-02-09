@@ -9,15 +9,13 @@ Upload image or audio file into the backend server. The file will be stored in t
 !!! warning "Authorization"
     JWT Token inside request header, with key `Authorization` and value `Bearer <JWT-Token>`
 
-**Request Body**: none
+**Request Body**: 
 
-**Request Header**
-Please put the raw file into the request header.
+Please put the raw file into the request body with key `file`.
 
-| Key             | Type     | Description | Constraints     | Default | Required |
-| --------------- | -------- | ----------- | --------------- | ------- | -------- |
-| `Authorization` | `string` | JWT Token   | As stated above | N/A     | Yes      |
-| `file`          | `File`   | Raw File    | N/A             | N/A     | Yes      |
+| Key    | Type   | Description | Constraints | Default | Required |
+| ------ | ------ | ----------- | ----------- | ------- | -------- |
+| `file` | `File` | Raw File    | N/A         | N/A     | Yes      |
 
 
 
