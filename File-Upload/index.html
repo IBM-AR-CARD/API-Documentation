@@ -347,6 +347,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#standard-file-names" title="Standard file names" class="md-nav__link">
+    Standard file names
+  </a>
+  
+</li>
+      
       
       
       
@@ -398,6 +405,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#standard-file-names" title="Standard file names" class="md-nav__link">
+    Standard file names
+  </a>
+  
+</li>
+      
       
       
       
@@ -420,15 +434,13 @@
                 <h1 id="file-upload-api">File Upload API<a class="headerlink" href="#file-upload-api" title="Permanent link">&para;</a></h1>
 <h2 id="file-upload">File upload<a class="headerlink" href="#file-upload" title="Permanent link">&para;</a></h2>
 <h3 id="post-upload"><code>POST</code> - /upload<a class="headerlink" href="#post-upload" title="Permanent link">&para;</a></h3>
-<p>Upload image or audio file into the backend server, please name the filename carefully before upload, 
-as this will be the file name stored on the server, file with the same name will be overwritten.</p>
+<p>Upload image or audio file into the backend server. The file will be stored in the user's respective folder. Please name the filename carefully before upload, as this will be the file name stored on the server, file with the same name uploaded by the same user will be overwritten.</p>
 <div class="admonition warning">
 <p class="admonition-title">Authorization</p>
 <p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
 </div>
-<p><strong>Request Body</strong>: none</p>
-<p><strong>Request Header</strong>
-Please put the raw file into the request header.</p>
+<p><strong>Request Body</strong>: </p>
+<p>Please put the raw file into the request body with key <code>file</code>.</p>
 <table>
 <thead>
 <tr>
@@ -441,14 +453,6 @@ Please put the raw file into the request header.</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>Authorization</code></td>
-<td><code>string</code></td>
-<td>JWT Token</td>
-<td>As stated above</td>
-<td>N/A</td>
-<td>Yes</td>
-</tr>
 <tr>
 <td><code>file</code></td>
 <td><code>File</code></td>
@@ -513,6 +517,39 @@ Please put the raw file into the request header.</p>
 </pre></div>
 
 </div>
+<h2 id="standard-file-names">Standard file names<a class="headerlink" href="#standard-file-names" title="Permanent link">&para;</a></h2>
+<p>The following are the example file names of common files shared between the client and the server.</p>
+<table>
+<thead>
+<tr>
+<th>File name</th>
+<th>Description</th>
+<th>File type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>profile.png</code></td>
+<td><code>Image for user's profile picture</code></td>
+<td><code>png</code></td>
+</tr>
+<tr>
+<td><code>education.mp3</code></td>
+<td><code>User's recording file for their education section</code></td>
+<td><code>mp3</code></td>
+</tr>
+<tr>
+<td><code>description.mp3</code></td>
+<td><code>User's recording file for their one sentence description section</code></td>
+<td><code>mp3</code></td>
+</tr>
+<tr>
+<td><code>work-experience.mp3</code></td>
+<td><code>User's recording file for their work experiences section</code></td>
+<td><code>mp3</code></td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
