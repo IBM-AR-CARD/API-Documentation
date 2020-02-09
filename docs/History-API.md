@@ -1,4 +1,4 @@
-# History API
+# History Cards API
 
 ## Get history
 

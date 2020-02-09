@@ -16,7 +16,7 @@ theme:
 repo_name: IBM-AR-CARD/API-Doc
 repo_url: https://github.com/IBM-AR-CARD/API-Documentation/
 
-copyright: "Copyright &copy; 2019 - 2020 UCL CS Team 13"
+copyright: "Copyright &copy; 2019 - 2020 IBM & UCL CS Team 13"
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -40,6 +40,7 @@ nav:
   - Welcome: index.md
   - User Authentication: Authentication.md
   - User Profile: Profile-API.md
+  - Chat Conversation API: Conversation-API.md
   - User History Cards: History-API.md
   - User Favourite Cards: Favorite-API.md
   - File Upload: File-Upload.md
