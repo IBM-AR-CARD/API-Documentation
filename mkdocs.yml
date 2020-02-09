@@ -40,7 +40,8 @@ nav:
   - Welcome: index.md
   - User Authentication: Authentication.md
   - User Profile: Profile-API.md
-  - History Cards: History-API.md
+  - User History Cards: History-API.md
+  - User Favourite Cards: Favorite-API.md
   - File Upload: File-Upload.md
 
 extra_css:
