@@ -221,3 +221,62 @@ Use this request to remove a single entry from the history.
         "error": "You are not authorized to access this resource"
     }
     ```
+
+
+
+
+### `POST` - /history/remove-all
+
+Use this request to remove all entries from the history list.
+
+!!! warning "Authorization"
+    JWT Token inside request header, with key `Authorization` and value `Bearer <JWT-Token>`
+
+
+**Query Parameter(s)**: none
+
+
+**Request Body**: none
+
+---
+
+!!! success
+    The history is cleared.
+
+    **Status Code**: `200 OK`
+
+    **Response Body**:
+
+    ```json
+    {
+        "success": "history is cleared"
+    }
+    ```
+
+    | Key       | Type     | Description     |
+    | --------- | -------- | --------------- |
+    | `success` | `string` | success message |
+
+
+
+!!! failure "Bad Request"
+    **Status Code**: `400 Bad Request`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "<Error message>"
+    }
+    ```
+
+!!! failure "Unauthorized"
+    **Status Code**: `401 Unauthorized`
+
+    **Response Body**:
+
+    ```json
+    {
+        "error": "You are not authorized to access this resource"
+    }
+    ```
