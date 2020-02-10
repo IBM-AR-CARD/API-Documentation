@@ -58,17 +58,19 @@ Use this request to return of the user's full profile in JSON. The URL of this e
         "Senior Inventor at IBM and Hursley Innovation Labs Technologist Lead",
       education:
         "I have studied at University of Humberside, on Field Of StudyInformation Systems. And received a 2:1 Grade",
-      gender: 2
+      gender: 2,
+      isFav: true
     }
     ```
 
-    | Key        | Type      | Description                       |
-    | ---------- | --------- | --------------------------------- |
-    | `_id`      | `string`  | MongoDB ObjectID                  |
-    | `dummyid`  | `string`  | Exists if the user is dummy data. |
-    | `username` | `string`  | Unique identifier                 |
-    | `profile`  | `string`  | Profile picture image Url         |
-    | `gender`   | `integer` | 0 - Unset, 1 - Female, 2 - Male   |
+    | Key        | Type      | Description                                             |
+    | ---------- | --------- | ------------------------------------------------------- |
+    | `_id`      | `string`  | MongoDB ObjectID                                        |
+    | `dummyid`  | `string`  | Exists if the user is dummy data.                       |
+    | `username` | `string`  | Unique identifier                                       |
+    | `profile`  | `string`  | Profile picture image Url                               |
+    | `gender`   | `integer` | 0 - Unset, 1 - Female, 2 - Male                         |
+    | `isFav`    | `boolean` | Whether the profile is in current user's favourite list |
 
 !!! failure "User not found"
     **Status Code**: `400 Bad Request`
