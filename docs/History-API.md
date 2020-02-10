@@ -29,7 +29,7 @@ Use this request to return a history list of cards the user have scanned.
     {
         "_id": "<History Storage ID, not usable>",
         "userid": "<User ID of the history owner>",
-        "history": [
+        "list": [
             {
                 "_id": "<History item id, with time info>",
                 "name": "<History user name>",
@@ -42,10 +42,10 @@ Use this request to return a history list of cards the user have scanned.
     }
     ```
 
-    | Key       | Type     | Description           |
-    | --------- | -------- | --------------------- |
-    | `userid`  | `string` | User ID               |
-    | `history` | `List`   | List of history items |
+    | Key      | Type     | Description           |
+    | -------- | -------- | --------------------- |
+    | `userid` | `string` | User ID               |
+    | `list`   | `List`   | List of history items |
 
 
 !!! failure "Bad Request"

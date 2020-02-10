@@ -29,7 +29,7 @@ Use this request to return a favorite list of cards the user have scanned.
     {
         "_id": "<Favorite Storage ID, not usable>",
         "userid": "<User ID of the favorite owner>",
-        "favorite": [
+        "list": [
             {
                 "_id": "<Favorite item id, with time info>",
                 "name": "<Favorite user name>",
@@ -42,10 +42,10 @@ Use this request to return a favorite list of cards the user have scanned.
     }
     ```
 
-    | Key        | Type     | Description            |
-    | ---------- | -------- | ---------------------- |
-    | `userid`   | `string` | User ID                |
-    | `favorite` | `List`   | List of favorite items |
+    | Key      | Type     | Description            |
+    | -------- | -------- | ---------------------- |
+    | `userid` | `string` | User ID                |
+    | `list`   | `List`   | List of favorite items |
 
 
 !!! failure "Bad Request"
