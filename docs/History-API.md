@@ -36,6 +36,7 @@ Use this request to return a history list of cards the user have scanned.
                 "userid": "<Current item user id>",
                 "profile": "<Profile avatar url>",
                 "username": "<Current item user name>",
+                "isFav": "<Is this user in the favourites of the request user>",
             },
             ...
         ]

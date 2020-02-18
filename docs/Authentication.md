@@ -129,6 +129,7 @@ Use this request to login an existing user.
     ```json
     {
         "success": "Successfully logged in.",
+        "_id": "<User ID>",
         "token": "<JWT Token>"
     }
     ```
@@ -136,6 +137,7 @@ Use this request to login an existing user.
     | Key       | Type     | Description     |
     | --------- | -------- | --------------- |
     | `success` | `string` | Success message |
+    | `_id`     | `string` | User ID         |
     | `token`   | `string` | JWT Token of the user, this token is persistent |
 
 
