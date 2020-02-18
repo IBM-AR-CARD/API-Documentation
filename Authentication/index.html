@@ -758,6 +758,7 @@ authorization in the request header. With key - <code>Authorization</code> and v
 <p><strong>Response Body</strong>:</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully logged in.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;User ID&gt;&quot;</span><span class="p">,</span>
     <span class="nt">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;JWT Token&gt;&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -775,6 +776,11 @@ authorization in the request header. With key - <code>Authorization</code> and v
 <td><code>success</code></td>
 <td><code>string</code></td>
 <td>Success message</td>
+</tr>
+<tr>
+<td><code>_id</code></td>
+<td><code>string</code></td>
+<td>User ID</td>
 </tr>
 <tr>
 <td><code>token</code></td>
