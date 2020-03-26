@@ -44,6 +44,7 @@ nav:
   - User History Cards: History-API.md
   - User Favourite Cards: Favorite-API.md
   - File Upload: File-Upload.md
+  - Deploy Flutter: deploy_flutter.md
 
 extra_css:
   - "stylesheets/style.css"
