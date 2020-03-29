@@ -1,5 +1,5 @@
-site_name: AR Card API Documentation
-site_description: API Documentation for IBM AR Business Card
+site_name: Appendices and Documentation
+site_description: Appendices, Manual and API Documentation for IBM AR Business Card
 site_author: UCL Computer Science System Engineering 2020 Team 13
 
 theme:
@@ -11,7 +11,7 @@ theme:
     primary: "deep purple"
     accent: "deep purple"
   feature:
-    tabs: false
+    tabs: true
 
 repo_name: IBM-AR-CARD/API-Doc
 repo_url: https://github.com/IBM-AR-CARD/API-Documentation/
@@ -37,15 +37,17 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Welcome: index.md
-  - User Authentication: Authentication.md
-  - User Profile: Profile-API.md
-  - Chat Conversation API: Conversation-API.md
-  - User History Cards: History-API.md
-  - User Favourite Cards: Favorite-API.md
-  - File Upload: File-Upload.md
-  - Deploy Flutter: Deploy-Flutter.md
-  - Deploy Vue: Deploy-Vue.md
+  - API Documentation:
+      - Welcome: index.md
+      - User Authentication: Authentication.md
+      - User Profile: Profile-API.md
+      - Chat Conversation API: Conversation-API.md
+      - User History Cards: History-API.md
+      - User Favourite Cards: Favorite-API.md
+      - File Upload: File-Upload.md
+  - Deployment Manual:
+      - Deploy Flutter: Deploy-Flutter.md
+      - Deploy Vue: Deploy-Vue.md
 
 extra_css:
   - "stylesheets/style.css"
