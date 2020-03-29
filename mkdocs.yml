@@ -46,6 +46,7 @@ nav:
   - File Upload: File-Upload.md
   - Deploy Flutter: Deploy-Flutter.md
   - Deploy Vue: Deploy-Vue.md
+  - Deploy Express : Deploy-Express.md
 
 extra_css:
   - "stylesheets/style.css"
