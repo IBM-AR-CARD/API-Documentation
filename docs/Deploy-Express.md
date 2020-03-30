@@ -2,7 +2,7 @@
 
 ## Install Node.js
 
-If you already install Node.js please jump to [Install Express](#install-express)
+If you already install Node.js please jump to [Clone from Github](#clone-from-github)
 
 ### Download Node and Npm
 
@@ -38,15 +38,13 @@ cd Backend-API
 
 ## Config your backend server
 
-open the environment file, 
+Make a copy of the default environment file `.env.default` then rename the file to `.env`.
 
-######################################
-################Edit me###############
-######################################
+Open the `.env` you just created, complete the config the save it.
 
 ## Run the application
 
-make sure you current directory is the backend working directory. Run
+Make sure you current directory is the backend working directory. Run
 
 ```bash
 node server.js

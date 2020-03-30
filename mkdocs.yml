@@ -47,6 +47,7 @@ nav:
   - Deploy Flutter: Deploy-Flutter.md
   - Deploy Vue: Deploy-Vue.md
   - Deploy Express : Deploy-Express.md
+  - Deploy MongoDB : Deploy-MongoDb.md
 
 extra_css:
   - "stylesheets/style.css"

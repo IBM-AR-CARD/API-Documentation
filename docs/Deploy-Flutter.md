@@ -167,8 +167,10 @@ flutter build apk
 
 if success you will see the follow output:
 
-```
+```bash
 √ Built build\app\outputs\apk\release\app-release.apk (303.2MB).
 ```
 
-which specifies the location of the application.
+which specifies the location of the application. 
+
+*Instruction reference from <https://flutter.dev/docs/get-started/install>*
