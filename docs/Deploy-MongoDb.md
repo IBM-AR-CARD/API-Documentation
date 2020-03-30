@@ -3,8 +3,8 @@
 Select the operating system on which you are installing MongoDB:
 
 + [Linux](#linux)
-+ macOS
-+ Windows
++ [macOS](#macos)
++ [Windows](#windows)
 
 ## Linux
 
@@ -135,7 +135,7 @@ sudo systemctl restart mongod
 
 You can follow the state of the process for errors or important messages by watching the output in the /var/log/mongodb/mongod.log file.
 
-*Instruction reference from <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb>*
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb>*
 
 ## macOS
 
@@ -207,5 +207,195 @@ To begin using MongoDB, connect a mongo shell to the running instance. From a ne
 mongo
 ```
 
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/>*
+
 ## Windows
 
+### Install MongoDB Community Edition
+
+#### Prerequisites
+
+Users on Windows versions previous to Windows 10 must install the following update before installing MongoDB:
+
+> [Update for Universal C Runtime for Windows](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)
+
+Users on Windows 10, Server 2016 and Server 2019 do not need this update.
+
+#### Procedure
+
+Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default [configuration file](https://docs.mongodb.com/manual/reference/configuration-options/) \<install directory>\bin\mongod.cfg.
+
+1. **Download MongoDB Community Edition.**
+
+    Download the installer (.msi) from the [MongoDB Download Center](https://www.mongodb.com/download-center/community?jmp=docs):  
+
+    + The Download Center should display **MongoDB Community Server** download information. If not, select **Server**, then click the **MongoDB Community Server** tab.  
+
+    + In the **Version** dropdown, select the version that corresponds to the latest MongoDB Server 4.2.
+
+    + In the **OS** dropdown, **Windows 64-bit X64** should be selected.  
+
+    + In the **Package** drop down, **MSI** should be selected.  
+
+    + Click **Download**.
+
+2. **Run the MongoDB installer.**
+
+    For example, from the Windows Explorer/File Explorer:
+
+    + Go to the directory where you downloaded the MongoDB installer (**.msi** file). By default, this is your **Downloads** directory.  
+
+    + Double-click the **.msi** file.
+
+3. **Follow the MongoDB Community Edition installation wizard.**
+
+    The wizard steps you through the installation of MongoDB and MongoDB Compass.
+
+
+##### a. Choose Setup Type
+
+You can choose either the **Complete** (recommended for most users) or **Custom** setup type. The **Complete** setup option installs MongoDB and the MongoDB tools to the default location. The **Custom** setup option allows you to specify which executables are installed and where.
+
+##### b. Service Configuration
+
+Starting in MongoDB 4.0, you can set up MongoDB as a Windows service during the install or just install the binaries.
+
++ [MongoDB Service](#mongodb-service)
++ [MongoDB](#mongodb)
+
+###### MongoDB Service
+
+The following installs and configures MongoDB as a Windows service.
+
+Starting in MongoDB 4.0, you can configure and start MongoDB as a Windows service during the install, and the MongoDB service is started upon successful installation.
+
+![image of MongoDB Service installation](img/windows-MongoDBService.png)
+
++ Select **Install MongoD as a Service** MongoDB as a service.
+
++ Select either:
+  
+  + **Run the service as Network Service user** (Default)  
+  
+    This is a Windows user account that is built-in to Windows  
+
+    **or**
+
+  + **Run the service as a local or domain user**
+
+    + For an existing local user account, specify a period (i.e. .) for the **Account Domain** and specify the **Account Name** and the **Account Password** for the user.  
+
+    + For an existing domain user, specify the **Account Domain**, the **Account Name** and the **Account Password** for that user.
+
++ **Service Name**. Specify the service name. Default name is **MongoDB**. If you already have a service with the specified name, you must choose another name.
+
++ **Data Directory**. Specify the data directory, which corresponds to the `--dbpath`. If the directory does not exist, the installer will create the directory and sets the directory access to the service user.
+
++ **Log Directory**. Specify the Log directory, which corresponds to the `--logpath.` If the directory does not exist, the installer will create the directory and sets the directory access to the service user.
+
+###### MongoDB
+
+The following installs MongoDB only and does not configure MongoDB as a Windows service.
+
+If you choose not to configure MongoDB as a Windows service, uncheck the **Install MongoD as a Service**.
+
+![image of MongoDB Service installation](img/windows-MongoDB.png)
+
+##### c. Install MongoDB Compass
+
+For Windows 8 or greater, you can have the wizard install [MongoDB Compass](https://www.mongodb.com/products/compass). To install Compass, select Install **MongoDB Compass** (Default).
+
+##### d. When ready, click **Install.**
+
+#### If You Installed MongoDB as a Windows Service
+
+The MongoDB service is started upon successful installation
+
+To begin using MongoDB, connect a `mongo.exe` shell to the running MongoDB instance. Either:
+
++ From Windows Explorer/File Explorer, go to **C:\Program Files\MongoDB\Server\4.2\bin\\** directory and double-click on mongo.exe.
+
++ Or, open a Command Interpreter with Administrative privileges and run:
+  
+  ```bash
+  C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe
+  ```
+
+#### If You Did Not Install MongoDB as a Windows Service
+
+If you only installed the executables and did not install MongoDB as a Windows service, you must manually start the MongoDB instance.
+
+See Run [MongoDB Community Edition from the Command Interpreter](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd) for instructions to start a MongoDB instance.
+
+### Run MongoDB Community Edition as a Windows Service
+
+Starting in version 4.0, you can install and configure MongoDB as a **Windows Service** during the install, and the MongoDB service is started upon successful installation. MongoDB is configured using the configuration file **\<install directory>\bin\mongod.cfg**.
+
+#### Start MongoDB Community Edition as a Windows Service
+
+To start/restart the MongoDB service, use the Services console:
+
+1. From the Services console, locate the MongoDB service.
+2. Right-click on the MongoDB service and click **Start**.
+
+To begin using MongoDB, connect a `mongo.exe` shell to the running MongoDB instance. To connect, open a **Command Interpreter** with Administrative privileges and run:
+
+```bash
+C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe
+```
+
+#### Stop MongoDB Community Edition as a Windows Service
+
+To stop/pause the MongoDB service, use the Services console:
+
+1. From the Services console, locate the MongoDB service.
+2. Right-click on the MongoDB service and click **Stop** (or **Pause**).
+
+#### Remove MongoDB Community Edition as a Windows Service
+
+To remove the MongoDB service, first use the Services console to stop the service. Then open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) as an **Administrator**, and run the following command:
+
+```bash
+sc.exe delete MongoDB
+```
+
+### Run MongoDB Community Edition from the Command Interpreter
+
+You can run MongoDB Community Edition from the [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) instead of as a service.
+
+Open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) as an **Administrator**.
+
+### 1. Create database directory.
+
+Create the `data directory` where MongoDB stores data. MongoDB’s default data directory path is the absolute path **\data\db** on the drive from which you start MongoDB.
+
+From the **Command Interpreter**, create the data directories:
+
+```bash
+cd C:\
+md "\data\db"
+```
+
+### 2. Start your MongoDB database.
+
+To start MongoDB, run `mongod.exe`.
+
+```bash
+"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="c:\data\db"
+```
+
+The `--dbpath` option points to your database directory.
+
+If the MongoDB database server is running correctly, the **Command Interpreter** displays:
+
+>[initandlisten] waiting for connections
+
+### 3. Connect to MongoDB.
+
+To connect a `mongo.exe` shell to the MongoDB instance, open another **Command Interpreter** with Administrative privileges and run:
+
+```bash
+"C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
+```
+
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/>*
