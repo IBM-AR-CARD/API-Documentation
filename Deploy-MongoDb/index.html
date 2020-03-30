@@ -1,0 +1,1599 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Appendices, Manual and API Documentation for IBM AR Business Card">
+      
+      
+      
+        <meta name="author" content="UCL Computer Science System Engineering 2020 Team 13">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Deploy MongoDB - Appendices and Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/style.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-113940817-4", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#deploy-mongodb" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Appendices and Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">memory</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Appendices and Documentation
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Deploy MongoDB
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/IBM-AR-CARD/API-Documentation/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    IBM-AR-CARD/API-Doc
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." title="API Documentation" class="md-tabs__link">
+          API Documentation
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Deploy-Flutter/" title="Deployment Manual" class="md-tabs__link md-tabs__link--active">
+          Deployment Manual
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Appendices and Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">memory</i>
+      
+    </a>
+    Appendices and Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/IBM-AR-CARD/API-Documentation/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    IBM-AR-CARD/API-Doc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      API Documentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        API Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome" class="md-nav__link">
+      Welcome
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Authentication/" title="User Authentication" class="md-nav__link">
+      User Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Profile-API/" title="User Profile" class="md-nav__link">
+      User Profile
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Conversation-API/" title="Chat Conversation API" class="md-nav__link">
+      Chat Conversation API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../History-API/" title="User History Cards" class="md-nav__link">
+      User History Cards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Favorite-API/" title="User Favourite Cards" class="md-nav__link">
+      User Favourite Cards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../File-Upload/" title="File Upload" class="md-nav__link">
+      File Upload
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Deployment Manual
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Deployment Manual
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy-Flutter/" title="Deploy Flutter" class="md-nav__link">
+      Deploy Flutter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy-Vue/" title="Deploy Vue" class="md-nav__link">
+      Deploy Vue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Deploy-Express/" title="Deploy Express" class="md-nav__link">
+      Deploy Express
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy MongoDB
+      </label>
+    
+    <a href="./" title="Deploy MongoDB" class="md-nav__link md-nav__link--active">
+      Deploy MongoDB
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-import-the-public-key-used-by-the-package-management-system" title="1. Import the public key used by the package management system." class="md-nav__link">
+    1. Import the public key used by the package management system.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-list-file-for-mongodb" title="2. Create a list file for MongoDB." class="md-nav__link">
+    2. Create a list file for MongoDB.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reload-local-package-database" title="3. Reload local package database." class="md-nav__link">
+    3. Reload local package database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-the-mongodb-packages" title="3. Install the MongoDB packages." class="md-nav__link">
+    3. Install the MongoDB packages.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition" title="Run MongoDB Community Edition" class="md-nav__link">
+    Run MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-mongodb" title="1. Start MongoDB." class="md-nav__link">
+    1. Start MongoDB.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verify-that-mongodb-has-started-successfully" title="2. Verify that MongoDB has started successfully." class="md-nav__link">
+    2. Verify that MongoDB has started successfully.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stop-mongodb" title="3. Stop MongoDB" class="md-nav__link">
+    3. Stop MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-restart-mongodb" title="4. Restart MongoDB." class="md-nav__link">
+    4. Restart MongoDB.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" title="macOS" class="md-nav__link">
+    macOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition_1" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-xcode" title="Install XCode" class="md-nav__link">
+    Install XCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-homebrew" title="Install Homebrew" class="md-nav__link">
+    Install Homebrew
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tap-the-mongodb-homebrew-tap" title="Tap the MongoDB Homebrew Tap" class="md-nav__link">
+    Tap the MongoDB Homebrew Tap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition_1" title="Run MongoDB Community Edition" class="md-nav__link">
+    Run MongoDB Community Edition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-and-use-mongodb" title="Connect and Use MongoDB" class="md-nav__link">
+    Connect and Use MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition_2" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure_1" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-choose-setup-type" title="a. Choose Setup Type" class="md-nav__link">
+    a. Choose Setup Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-service-configuration" title="b. Service Configuration" class="md-nav__link">
+    b. Service Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-service" title="MongoDB Service" class="md-nav__link">
+    MongoDB Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb" title="MongoDB" class="md-nav__link">
+    MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-install-mongodb-compass" title="c. Install MongoDB Compass" class="md-nav__link">
+    c. Install MongoDB Compass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-when-ready-click-install" title="d. When ready, click Install." class="md-nav__link">
+    d. When ready, click Install.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-installed-mongodb-as-a-windows-service" title="If You Installed MongoDB as a Windows Service" class="md-nav__link">
+    If You Installed MongoDB as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-did-not-install-mongodb-as-a-windows-service" title="If You Did Not Install MongoDB as a Windows Service" class="md-nav__link">
+    If You Did Not Install MongoDB as a Windows Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition-as-a-windows-service" title="Run MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Run MongoDB Community Edition as a Windows Service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-mongodb-community-edition-as-a-windows-service" title="Start MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Start MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-mongodb-community-edition-as-a-windows-service" title="Stop MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Stop MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-mongodb-community-edition-as-a-windows-service" title="Remove MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Remove MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition-from-the-command-interpreter" title="Run MongoDB Community Edition from the Command Interpreter" class="md-nav__link">
+    Run MongoDB Community Edition from the Command Interpreter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-create-database-directory" title="1. Create database directory." class="md-nav__link">
+    1. Create database directory.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-start-your-mongodb-database" title="2. Start your MongoDB database." class="md-nav__link">
+    2. Start your MongoDB database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-mongodb" title="3. Connect to MongoDB." class="md-nav__link">
+    3. Connect to MongoDB.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-import-the-public-key-used-by-the-package-management-system" title="1. Import the public key used by the package management system." class="md-nav__link">
+    1. Import the public key used by the package management system.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-a-list-file-for-mongodb" title="2. Create a list file for MongoDB." class="md-nav__link">
+    2. Create a list file for MongoDB.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-reload-local-package-database" title="3. Reload local package database." class="md-nav__link">
+    3. Reload local package database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-the-mongodb-packages" title="3. Install the MongoDB packages." class="md-nav__link">
+    3. Install the MongoDB packages.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition" title="Run MongoDB Community Edition" class="md-nav__link">
+    Run MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-mongodb" title="1. Start MongoDB." class="md-nav__link">
+    1. Start MongoDB.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verify-that-mongodb-has-started-successfully" title="2. Verify that MongoDB has started successfully." class="md-nav__link">
+    2. Verify that MongoDB has started successfully.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-stop-mongodb" title="3. Stop MongoDB" class="md-nav__link">
+    3. Stop MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-restart-mongodb" title="4. Restart MongoDB." class="md-nav__link">
+    4. Restart MongoDB.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" title="macOS" class="md-nav__link">
+    macOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition_1" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-xcode" title="Install XCode" class="md-nav__link">
+    Install XCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-homebrew" title="Install Homebrew" class="md-nav__link">
+    Install Homebrew
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tap-the-mongodb-homebrew-tap" title="Tap the MongoDB Homebrew Tap" class="md-nav__link">
+    Tap the MongoDB Homebrew Tap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition_1" title="Run MongoDB Community Edition" class="md-nav__link">
+    Run MongoDB Community Edition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-and-use-mongodb" title="Connect and Use MongoDB" class="md-nav__link">
+    Connect and Use MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-mongodb-community-edition_2" title="Install MongoDB Community Edition" class="md-nav__link">
+    Install MongoDB Community Edition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites_1" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedure_1" title="Procedure" class="md-nav__link">
+    Procedure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-choose-setup-type" title="a. Choose Setup Type" class="md-nav__link">
+    a. Choose Setup Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-service-configuration" title="b. Service Configuration" class="md-nav__link">
+    b. Service Configuration
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mongodb-service" title="MongoDB Service" class="md-nav__link">
+    MongoDB Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mongodb" title="MongoDB" class="md-nav__link">
+    MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-install-mongodb-compass" title="c. Install MongoDB Compass" class="md-nav__link">
+    c. Install MongoDB Compass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-when-ready-click-install" title="d. When ready, click Install." class="md-nav__link">
+    d. When ready, click Install.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-installed-mongodb-as-a-windows-service" title="If You Installed MongoDB as a Windows Service" class="md-nav__link">
+    If You Installed MongoDB as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-you-did-not-install-mongodb-as-a-windows-service" title="If You Did Not Install MongoDB as a Windows Service" class="md-nav__link">
+    If You Did Not Install MongoDB as a Windows Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition-as-a-windows-service" title="Run MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Run MongoDB Community Edition as a Windows Service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-mongodb-community-edition-as-a-windows-service" title="Start MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Start MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-mongodb-community-edition-as-a-windows-service" title="Stop MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Stop MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-mongodb-community-edition-as-a-windows-service" title="Remove MongoDB Community Edition as a Windows Service" class="md-nav__link">
+    Remove MongoDB Community Edition as a Windows Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-mongodb-community-edition-from-the-command-interpreter" title="Run MongoDB Community Edition from the Command Interpreter" class="md-nav__link">
+    Run MongoDB Community Edition from the Command Interpreter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-create-database-directory" title="1. Create database directory." class="md-nav__link">
+    1. Create database directory.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-start-your-mongodb-database" title="2. Start your MongoDB database." class="md-nav__link">
+    2. Start your MongoDB database.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-connect-to-mongodb" title="3. Connect to MongoDB." class="md-nav__link">
+    3. Connect to MongoDB.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/IBM-AR-CARD/API-Documentation/edit/master/docs/Deploy-MongoDb.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="deploy-mongodb">Deploy mongoDB<a class="headerlink" href="#deploy-mongodb" title="Permanent link">&para;</a></h1>
+<p>Select the operating system on which you are installing MongoDB:</p>
+<ul>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#macos">macOS</a></li>
+<li><a href="#windows">Windows</a></li>
+</ul>
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<p>This instruction is for Ubuntu only if your are other than Ubuntu, please follow the instruction from <a href="https://docs.mongodb.com/manual/administration/install-on-linux/">official website</a></p>
+<h3 id="install-mongodb-community-edition">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition" title="Permanent link">&para;</a></h3>
+<p>Follow these steps to install MongoDB Community Edition using the apt package manager.</p>
+<h4 id="1-import-the-public-key-used-by-the-package-management-system">1. <strong>Import the public key used by the package management system.</strong><a class="headerlink" href="#1-import-the-public-key-used-by-the-package-management-system" title="Permanent link">&para;</a></h4>
+<p>From a terminal, issue the following command to import the MongoDB public GPG Key from <a href="https://www.mongodb.org/static/pgp/server-4.2.asc">https://www.mongodb.org/static/pgp/server-4.2.asc</a>:</p>
+<div class="codehilite"><pre><span></span>wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc <span class="p">|</span> sudo apt-key add -
+</pre></div>
+
+<p>The operation should respond with an OK.</p>
+<p>However, if you receive an error indicating that gnupg is not installed, you can:</p>
+<ol>
+<li>
+<p>Install gnupg and its required libraries using the following command:</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install gnupg
+</pre></div>
+
+</li>
+<li>
+<p>Once installed, retry importing the key:</p>
+<div class="codehilite"><pre><span></span>wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc <span class="p">|</span> sudo apt-key add -
+</pre></div>
+
+</li>
+</ol>
+<h4 id="2-create-a-list-file-for-mongodb">2. <strong>Create a list file for MongoDB.</strong><a class="headerlink" href="#2-create-a-list-file-for-mongodb" title="Permanent link">&para;</a></h4>
+<p>Create the list file /etc/apt/sources.list.d/mongodb-org-4.2.list for your version of Ubuntu.</p>
+<p>Choose the appropriate option for your version of Ubuntu. If you are unsure of what Ubuntu version the host is running, open a terminal or shell on the host and execute lsb_release -dc.</p>
+<ul>
+<li>Ubuntu 18.04 (Bionic)<br />
+  Create the /etc/apt/sources.list.d/mongodb-org-4.2.list file for Ubuntu 18.04 (Bionic):</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+</pre></div>
+
+<ul>
+<li>Create the /etc/apt/sources.list.d/mongodb-org-4.2.list file for Ubuntu 16.04 (Xenial):  </li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+</pre></div>
+
+<h4 id="3-reload-local-package-database">3. <strong>Reload local package database.</strong><a class="headerlink" href="#3-reload-local-package-database" title="Permanent link">&para;</a></h4>
+<p>Issue the following command to reload the local package database:</p>
+<div class="codehilite"><pre><span></span>sudo apt-get update
+</pre></div>
+
+<h4 id="3-install-the-mongodb-packages">3. <strong>Install the MongoDB packages.</strong><a class="headerlink" href="#3-install-the-mongodb-packages" title="Permanent link">&para;</a></h4>
+<p>To install the latest stable version, issue the following:</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install -y mongodb-org
+</pre></div>
+
+<p>Optional. Although you can specify any available version of MongoDB, apt-get will upgrade the packages when a newer version becomes available. To prevent unintended upgrades, you can pin the package at the currently installed version:</p>
+<div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;mongodb-org hold&quot;</span> <span class="p">|</span> sudo dpkg --set-selections
+<span class="nb">echo</span> <span class="s2">&quot;mongodb-org-server hold&quot;</span> <span class="p">|</span> sudo dpkg --set-selections
+<span class="nb">echo</span> <span class="s2">&quot;mongodb-org-shell hold&quot;</span> <span class="p">|</span> sudo dpkg --set-selections
+<span class="nb">echo</span> <span class="s2">&quot;mongodb-org-mongos hold&quot;</span> <span class="p">|</span> sudo dpkg --set-selections
+<span class="nb">echo</span> <span class="s2">&quot;mongodb-org-tools hold&quot;</span> <span class="p">|</span> sudo dpkg --set-selections
+</pre></div>
+
+<h3 id="run-mongodb-community-edition"><strong>Run MongoDB Community Edition</strong><a class="headerlink" href="#run-mongodb-community-edition" title="Permanent link">&para;</a></h3>
+<h4 id="1-start-mongodb">1. Start MongoDB.<a class="headerlink" href="#1-start-mongodb" title="Permanent link">&para;</a></h4>
+<p>You can start the mongod process by issuing the following command:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl start mongod
+</pre></div>
+
+<p>If you receive an error similar to the following when starting mongod:</p>
+<blockquote>
+<p>Failed to start mongod.service: Unit mongod.service not found.</p>
+</blockquote>
+<p>Run the following command first:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl daemon-reload
+</pre></div>
+
+<p>Then run the start command above again.</p>
+<h4 id="2-verify-that-mongodb-has-started-successfully">2. <strong>Verify that MongoDB has started successfully.</strong><a class="headerlink" href="#2-verify-that-mongodb-has-started-successfully" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>sudo systemctl status mongod
+</pre></div>
+
+<p>You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl <span class="nb">enable</span> mongod
+</pre></div>
+
+<h4 id="3-stop-mongodb">3. <strong>Stop MongoDB</strong><a class="headerlink" href="#3-stop-mongodb" title="Permanent link">&para;</a></h4>
+<p>As needed, you can stop the mongod process by issuing the following command:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl stop mongod
+</pre></div>
+
+<h3 id="4-restart-mongodb">4. <strong>Restart MongoDB.</strong><a class="headerlink" href="#4-restart-mongodb" title="Permanent link">&para;</a></h3>
+<p>You can restart the mongod process by issuing the following command:</p>
+<div class="codehilite"><pre><span></span>sudo systemctl restart mongod
+</pre></div>
+
+<p>You can follow the state of the process for errors or important messages by watching the output in the /var/log/mongodb/mongod.log file.</p>
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb</a></em></p>
+<h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<h3 id="install-mongodb-community-edition_1">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition_1" title="Permanent link">&para;</a></h3>
+<h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
+<p>If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official <a href="https://github.com/mongodb/homebrew-brew">MongoDB Homebrew Tap</a>, skip the prerequisites and go to the <a href="#procedure">Procedure</a> step.</p>
+<h4 id="install-xcode">Install XCode<a class="headerlink" href="#install-xcode" title="Permanent link">&para;</a></h4>
+<p>Apple’s XCode includes command-line tools that are required by brew, and is available for free on the App Store. Make sure you are running the latest version.</p>
+<h4 id="install-homebrew">Install Homebrew<a class="headerlink" href="#install-homebrew" title="Permanent link">&para;</a></h4>
+<p>OSX does not include the Homebrew brew package by default. Install brew using the <a href="https://brew.sh/#install">official instructions</a>.</p>
+<h4 id="tap-the-mongodb-homebrew-tap">Tap the MongoDB Homebrew Tap<a class="headerlink" href="#tap-the-mongodb-homebrew-tap" title="Permanent link">&para;</a></h4>
+<p>Issue the following from the terminal to tap the official <a href="https://github.com/mongodb/homebrew-brew">MongoDB Homebrew Tap</a>:</p>
+<div class="codehilite"><pre><span></span>brew tap mongodb/brew
+</pre></div>
+
+<h4 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h4>
+<p>Follow these steps to install MongoDB Community Edition using the third-party brew package manager.</p>
+<p>From a terminal, issue the following:</p>
+<div class="codehilite"><pre><span></span>brew install mongodb-community@4.2
+</pre></div>
+
+<h3 id="run-mongodb-community-edition_1">Run MongoDB Community Edition<a class="headerlink" href="#run-mongodb-community-edition_1" title="Permanent link">&para;</a></h3>
+<p>Follow these steps to run MongoDB Community Edition. These instructions assume that you are using the default settings.</p>
+<p>You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see <a href="https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings">ulimit settings</a> for more information).</p>
+<ul>
+<li>To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:</li>
+</ul>
+<div class="codehilite"><pre><span></span>brew services start mongodb-community@4.2
+</pre></div>
+
+<ul>
+<li>To run MongoDB manually as a background process, issue the following:</li>
+</ul>
+<div class="codehilite"><pre><span></span>mongod --config /usr/local/etc/mongod.conf --fork
+</pre></div>
+
+<p>Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own <a href="https://docs.mongodb.com/manual/reference/configuration-options/">MongoDB configuration</a> options to this file as well.</p>
+<p>To verify that MongoDB is running, search for mongod in your running processes:</p>
+<div class="codehilite"><pre><span></span>ps aux <span class="p">|</span> grep -v grep <span class="p">|</span> grep mongod
+</pre></div>
+
+<p>You can also view the log file to see the current status of your mongod process: /usr/local/var/log/mongodb/mongo.log.</p>
+<h3 id="connect-and-use-mongodb">Connect and Use MongoDB<a class="headerlink" href="#connect-and-use-mongodb" title="Permanent link">&para;</a></h3>
+<p>To begin using MongoDB, connect a mongo shell to the running instance. From a new terminal, issue the following:</p>
+<div class="codehilite"><pre><span></span>mongo
+</pre></div>
+
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></em></p>
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<h3 id="install-mongodb-community-edition_2">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition_2" title="Permanent link">&para;</a></h3>
+<h4 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h4>
+<p>Users on Windows versions previous to Windows 10 must install the following update before installing MongoDB:</p>
+<blockquote>
+<p><a href="https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows">Update for Universal C Runtime for Windows</a></p>
+</blockquote>
+<p>Users on Windows 10, Server 2016 and Server 2019 do not need this update.</p>
+<h4 id="procedure_1">Procedure<a class="headerlink" href="#procedure_1" title="Permanent link">&para;</a></h4>
+<p>Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default <a href="https://docs.mongodb.com/manual/reference/configuration-options/">configuration file</a> \<install directory>\bin\mongod.cfg.</p>
+<ol>
+<li>
+<p><strong>Download MongoDB Community Edition.</strong></p>
+<p>Download the installer (.msi) from the <a href="https://www.mongodb.com/download-center/community?jmp=docs">MongoDB Download Center</a>:  </p>
+<ul>
+<li>
+<p>The Download Center should display <strong>MongoDB Community Server</strong> download information. If not, select <strong>Server</strong>, then click the <strong>MongoDB Community Server</strong> tab.  </p>
+</li>
+<li>
+<p>In the <strong>Version</strong> dropdown, select the version that corresponds to the latest MongoDB Server 4.2.</p>
+</li>
+<li>
+<p>In the <strong>OS</strong> dropdown, <strong>Windows 64-bit X64</strong> should be selected.  </p>
+</li>
+<li>
+<p>In the <strong>Package</strong> drop down, <strong>MSI</strong> should be selected.  </p>
+</li>
+<li>
+<p>Click <strong>Download</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Run the MongoDB installer.</strong></p>
+<p>For example, from the Windows Explorer/File Explorer:</p>
+<ul>
+<li>
+<p>Go to the directory where you downloaded the MongoDB installer (<strong>.msi</strong> file). By default, this is your <strong>Downloads</strong> directory.  </p>
+</li>
+<li>
+<p>Double-click the <strong>.msi</strong> file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Follow the MongoDB Community Edition installation wizard.</strong></p>
+<p>The wizard steps you through the installation of MongoDB and MongoDB Compass.</p>
+</li>
+</ol>
+<h5 id="a-choose-setup-type">a. Choose Setup Type<a class="headerlink" href="#a-choose-setup-type" title="Permanent link">&para;</a></h5>
+<p>You can choose either the <strong>Complete</strong> (recommended for most users) or <strong>Custom</strong> setup type. The <strong>Complete</strong> setup option installs MongoDB and the MongoDB tools to the default location. The <strong>Custom</strong> setup option allows you to specify which executables are installed and where.</p>
+<h5 id="b-service-configuration">b. Service Configuration<a class="headerlink" href="#b-service-configuration" title="Permanent link">&para;</a></h5>
+<p>Starting in MongoDB 4.0, you can set up MongoDB as a Windows service during the install or just install the binaries.</p>
+<ul>
+<li><a href="#mongodb-service">MongoDB Service</a></li>
+<li><a href="#mongodb">MongoDB</a></li>
+</ul>
+<h6 id="mongodb-service">MongoDB Service<a class="headerlink" href="#mongodb-service" title="Permanent link">&para;</a></h6>
+<p>The following installs and configures MongoDB as a Windows service.</p>
+<p>Starting in MongoDB 4.0, you can configure and start MongoDB as a Windows service during the install, and the MongoDB service is started upon successful installation.</p>
+<p><img alt="image of MongoDB Service installation" src="../img/windows-MongoDBService.png" /></p>
+<ul>
+<li>
+<p>Select <strong>Install MongoD as a Service</strong> MongoDB as a service.</p>
+</li>
+<li>
+<p>Select either:</p>
+</li>
+<li>
+<p><strong>Run the service as Network Service user</strong> (Default)  </p>
+<p>This is a Windows user account that is built-in to Windows  </p>
+<p><strong>or</strong></p>
+</li>
+<li>
+<p><strong>Run the service as a local or domain user</strong></p>
+<ul>
+<li>
+<p>For an existing local user account, specify a period (i.e. .) for the <strong>Account Domain</strong> and specify the <strong>Account Name</strong> and the <strong>Account Password</strong> for the user.  </p>
+</li>
+<li>
+<p>For an existing domain user, specify the <strong>Account Domain</strong>, the <strong>Account Name</strong> and the <strong>Account Password</strong> for that user.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Service Name</strong>. Specify the service name. Default name is <strong>MongoDB</strong>. If you already have a service with the specified name, you must choose another name.</p>
+</li>
+<li>
+<p><strong>Data Directory</strong>. Specify the data directory, which corresponds to the <code>--dbpath</code>. If the directory does not exist, the installer will create the directory and sets the directory access to the service user.</p>
+</li>
+<li>
+<p><strong>Log Directory</strong>. Specify the Log directory, which corresponds to the <code>--logpath.</code> If the directory does not exist, the installer will create the directory and sets the directory access to the service user.</p>
+</li>
+</ul>
+<h6 id="mongodb">MongoDB<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h6>
+<p>The following installs MongoDB only and does not configure MongoDB as a Windows service.</p>
+<p>If you choose not to configure MongoDB as a Windows service, uncheck the <strong>Install MongoD as a Service</strong>.</p>
+<p><img alt="image of MongoDB Service installation" src="../img/windows-MongoDB.png" /></p>
+<h5 id="c-install-mongodb-compass">c. Install MongoDB Compass<a class="headerlink" href="#c-install-mongodb-compass" title="Permanent link">&para;</a></h5>
+<p>For Windows 8 or greater, you can have the wizard install <a href="https://www.mongodb.com/products/compass">MongoDB Compass</a>. To install Compass, select Install <strong>MongoDB Compass</strong> (Default).</p>
+<h5 id="d-when-ready-click-install">d. When ready, click <strong>Install.</strong><a class="headerlink" href="#d-when-ready-click-install" title="Permanent link">&para;</a></h5>
+<h4 id="if-you-installed-mongodb-as-a-windows-service">If You Installed MongoDB as a Windows Service<a class="headerlink" href="#if-you-installed-mongodb-as-a-windows-service" title="Permanent link">&para;</a></h4>
+<p>The MongoDB service is started upon successful installation</p>
+<p>To begin using MongoDB, connect a <code>mongo.exe</code> shell to the running MongoDB instance. Either:</p>
+<ul>
+<li>
+<p>From Windows Explorer/File Explorer, go to <strong>C:\Program Files\MongoDB\Server\4.2\bin\</strong> directory and double-click on mongo.exe.</p>
+</li>
+<li>
+<p>Or, open a Command Interpreter with Administrative privileges and run:</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>C:<span class="se">\P</span>rogram Files<span class="se">\M</span>ongoDB<span class="se">\S</span>erver<span class="se">\4</span>.2<span class="se">\b</span>in<span class="se">\m</span>ongo.exe
+</pre></div>
+
+<h4 id="if-you-did-not-install-mongodb-as-a-windows-service">If You Did Not Install MongoDB as a Windows Service<a class="headerlink" href="#if-you-did-not-install-mongodb-as-a-windows-service" title="Permanent link">&para;</a></h4>
+<p>If you only installed the executables and did not install MongoDB as a Windows service, you must manually start the MongoDB instance.</p>
+<p>See Run <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd">MongoDB Community Edition from the Command Interpreter</a> for instructions to start a MongoDB instance.</p>
+<h3 id="run-mongodb-community-edition-as-a-windows-service">Run MongoDB Community Edition as a Windows Service<a class="headerlink" href="#run-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h3>
+<p>Starting in version 4.0, you can install and configure MongoDB as a <strong>Windows Service</strong> during the install, and the MongoDB service is started upon successful installation. MongoDB is configured using the configuration file <strong>\<install directory>\bin\mongod.cfg</strong>.</p>
+<h4 id="start-mongodb-community-edition-as-a-windows-service">Start MongoDB Community Edition as a Windows Service<a class="headerlink" href="#start-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h4>
+<p>To start/restart the MongoDB service, use the Services console:</p>
+<ol>
+<li>From the Services console, locate the MongoDB service.</li>
+<li>Right-click on the MongoDB service and click <strong>Start</strong>.</li>
+</ol>
+<p>To begin using MongoDB, connect a <code>mongo.exe</code> shell to the running MongoDB instance. To connect, open a <strong>Command Interpreter</strong> with Administrative privileges and run:</p>
+<div class="codehilite"><pre><span></span>C:<span class="se">\P</span>rogram Files<span class="se">\M</span>ongoDB<span class="se">\S</span>erver<span class="se">\4</span>.2<span class="se">\b</span>in<span class="se">\m</span>ongo.exe
+</pre></div>
+
+<h4 id="stop-mongodb-community-edition-as-a-windows-service">Stop MongoDB Community Edition as a Windows Service<a class="headerlink" href="#stop-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h4>
+<p>To stop/pause the MongoDB service, use the Services console:</p>
+<ol>
+<li>From the Services console, locate the MongoDB service.</li>
+<li>Right-click on the MongoDB service and click <strong>Stop</strong> (or <strong>Pause</strong>).</li>
+</ol>
+<h4 id="remove-mongodb-community-edition-as-a-windows-service">Remove MongoDB Community Edition as a Windows Service<a class="headerlink" href="#remove-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h4>
+<p>To remove the MongoDB service, first use the Services console to stop the service. Then open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) as an <strong>Administrator</strong>, and run the following command:</p>
+<div class="codehilite"><pre><span></span>sc.exe delete MongoDB
+</pre></div>
+
+<h3 id="run-mongodb-community-edition-from-the-command-interpreter">Run MongoDB Community Edition from the Command Interpreter<a class="headerlink" href="#run-mongodb-community-edition-from-the-command-interpreter" title="Permanent link">&para;</a></h3>
+<p>You can run MongoDB Community Edition from the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) instead of as a service.</p>
+<p>Open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) as an <strong>Administrator</strong>.</p>
+<h3 id="1-create-database-directory">1. Create database directory.<a class="headerlink" href="#1-create-database-directory" title="Permanent link">&para;</a></h3>
+<p>Create the <code>data directory</code> where MongoDB stores data. MongoDB’s default data directory path is the absolute path <strong>\data\db</strong> on the drive from which you start MongoDB.</p>
+<p>From the <strong>Command Interpreter</strong>, create the data directories:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> C:<span class="se">\</span>
+md <span class="s2">&quot;\data\db&quot;</span>
+</pre></div>
+
+<h3 id="2-start-your-mongodb-database">2. Start your MongoDB database.<a class="headerlink" href="#2-start-your-mongodb-database" title="Permanent link">&para;</a></h3>
+<p>To start MongoDB, run <code>mongod.exe</code>.</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe&quot;</span> --dbpath<span class="o">=</span><span class="s2">&quot;c:\data\db&quot;</span>
+</pre></div>
+
+<p>The <code>--dbpath</code> option points to your database directory.</p>
+<p>If the MongoDB database server is running correctly, the <strong>Command Interpreter</strong> displays:</p>
+<blockquote>
+<p>[initandlisten] waiting for connections</p>
+</blockquote>
+<h3 id="3-connect-to-mongodb">3. Connect to MongoDB.<a class="headerlink" href="#3-connect-to-mongodb" title="Permanent link">&para;</a></h3>
+<p>To connect a <code>mongo.exe</code> shell to the MongoDB instance, open another <strong>Command Interpreter</strong> with Administrative privileges and run:</p>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe&quot;</span>
+</pre></div>
+
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></em></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Deploy-Express/" title="Deploy Express" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Deploy Express
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 - 2020 IBM & UCL CS Team 13
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
