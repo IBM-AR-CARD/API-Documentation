@@ -143,7 +143,7 @@ You can follow the state of the process for errors or important messages by watc
 
 #### Prerequisites
 
-If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew), skip the prerequisites and go to the [Procedure]() step.
+If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew), skip the prerequisites and go to the [Procedure](#procedure) step.
 
 #### Install XCode
 
@@ -160,4 +160,52 @@ Issue the following from the terminal to tap the official [MongoDB Homebrew Tap]
 ```bash
 brew tap mongodb/brew
 ```
+
+#### Procedure
+
+Follow these steps to install MongoDB Community Edition using the third-party brew package manager.
+
+From a terminal, issue the following:
+
+```bash
+brew install mongodb-community@4.2
+```
+
+### Run MongoDB Community Edition
+
+Follow these steps to run MongoDB Community Edition. These instructions assume that you are using the default settings.
+
+You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see [ulimit settings](https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings) for more information).
+
++ To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
+
+  ```bash
+  brew services start mongodb-community@4.2
+  ```
+
++ To run MongoDB manually as a background process, issue the following:
+
+  ```bash
+  mongod --config /usr/local/etc/mongod.conf --fork
+  ```
+
+Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own [MongoDB configuration](https://docs.mongodb.com/manual/reference/configuration-options/) options to this file as well.
+
+To verify that MongoDB is running, search for mongod in your running processes:
+
+```bash
+ps aux | grep -v grep | grep mongod
+```
+
+You can also view the log file to see the current status of your mongod process: /usr/local/var/log/mongodb/mongo.log.
+
+### Connect and Use MongoDB
+
+To begin using MongoDB, connect a mongo shell to the running instance. From a new terminal, issue the following:
+
+```bash
+mongo
+```
+
+## Windows
 
