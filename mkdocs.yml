@@ -11,7 +11,7 @@ theme:
     primary: "deep purple"
     accent: "deep purple"
   feature:
-    tabs: true
+    tabs: false
 
 repo_name: IBM-AR-CARD/API-Doc
 repo_url: https://github.com/IBM-AR-CARD/API-Documentation/
@@ -48,8 +48,8 @@ nav:
   - Deployment Manual:
       - Deploy Flutter: Deploy-Flutter.md
       - Deploy Vue: Deploy-Vue.md
-      - Deploy Express: Deploy-Express.md
       - Deploy MongoDB: Deploy-MongoDb.md
+      - Deploy Express: Deploy-Express.md
 
 extra_css:
   - "stylesheets/style.css"
