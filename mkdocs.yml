@@ -37,6 +37,12 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
+  - Deployment Manual:
+      - Deploy Flutter: Deploy-Flutter.md
+      - Deploy Vue: Deploy-Vue.md
+      - Deploy MongoDB: Deploy-MongoDb.md
+      - Deploy Express: Deploy-Express.md
+      - Create Data: Create-Data.md
   - API Documentation:
       - Welcome: index.md
       - User Authentication: Authentication.md
@@ -45,11 +51,6 @@ nav:
       - User History Cards: History-API.md
       - User Favourite Cards: Favorite-API.md
       - File Upload: File-Upload.md
-  - Deployment Manual:
-      - Deploy Flutter: Deploy-Flutter.md
-      - Deploy Vue: Deploy-Vue.md
-      - Deploy MongoDB: Deploy-MongoDb.md
-      - Deploy Express: Deploy-Express.md
 
 extra_css:
   - "stylesheets/style.css"

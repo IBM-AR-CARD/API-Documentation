@@ -50,6 +50,9 @@ Use this request to return of the user's full profile in JSON. The URL of this e
       username: "jonmcnamara",
       profile:
         "https://media-exp2.licdn.com/dms/image/C5603AQFA_oQhi6-2Cg/profile-displayphoto-shrink_800_800/0?e=1584576000&v=beta&t=QfVEJg5DU7IHXBiUlaZ2nRjI5gHTqok20eL17iHHa8Y",
+      email: "john@ucl.ac.uk",
+      phone: "12345678901",
+      website: "ar-card.henryz.cc",
       firstname: "John",
       lastname: "McNamara",
       description:
@@ -167,7 +170,7 @@ Same as the `POST` request above.
 
 ## Create dummy profile data
 
-### `GET` - /profile/generate
+### `GET` - generate/profile
 
 Use this request to generate 3 predefined user profiles (with `username`: `jonmcnamara`, `amy-pajak`, `ben-jones` respectively).
 

@@ -55,7 +55,7 @@ Make sure:
 
 - Your current directory is the backend working directory.
 - MongoDB is correctly installed.
-- You have run `npm install` to install all the dependencies.
+- You have ran `npm install` to install all the dependencies.
 - Your `.env` is correctly configured.
 
 Run:
