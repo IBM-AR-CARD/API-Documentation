@@ -43,6 +43,8 @@ nav:
       - Deploy MongoDB: Deploy-MongoDb.md
       - Deploy Express: Deploy-Express.md
       - Create Data: Create-Data.md
+  - User Manual:
+      - Flutter User Manual: Flutter-Manual.md
   - API Documentation:
       - Welcome: index.md
       - User Authentication: Authentication.md
