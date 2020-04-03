@@ -1259,11 +1259,11 @@
 <li><a href="#windows">Windows</a></li>
 </ul>
 <h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
-<p>This instruction is for Ubuntu only if your are other than Ubuntu, please follow the instruction from <a href="https://docs.mongodb.com/manual/administration/install-on-linux/">official website</a></p>
+<p>This instruction is for Ubuntu only if your are other than Ubuntu, please follow the instruction from <a href="https://docs.mongodb.com/manual/administration/install-on-linux/" target="_blank">official website</a></p>
 <h3 id="install-mongodb-community-edition">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition" title="Permanent link">&para;</a></h3>
 <p>Follow these steps to install MongoDB Community Edition using the apt package manager.</p>
 <h4 id="1-import-the-public-key-used-by-the-package-management-system">1. <strong>Import the public key used by the package management system.</strong><a class="headerlink" href="#1-import-the-public-key-used-by-the-package-management-system" title="Permanent link">&para;</a></h4>
-<p>From a terminal, issue the following command to import the MongoDB public GPG Key from <a href="https://www.mongodb.org/static/pgp/server-4.2.asc">https://www.mongodb.org/static/pgp/server-4.2.asc</a>:</p>
+<p>From a terminal, issue the following command to import the MongoDB public GPG Key from <a href="https://www.mongodb.org/static/pgp/server-4.2.asc" target="_blank">https://www.mongodb.org/static/pgp/server-4.2.asc</a>:</p>
 <div class="codehilite"><pre><span></span>wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc <span class="p">|</span> sudo apt-key add -
 </pre></div>
 
@@ -1351,17 +1351,17 @@
 </pre></div>
 
 <p>You can follow the state of the process for errors or important messages by watching the output in the /var/log/mongodb/mongod.log file.</p>
-<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb</a></em></p>
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb" target="_blank">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb</a></em></p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
 <h3 id="install-mongodb-community-edition_1">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition_1" title="Permanent link">&para;</a></h3>
 <h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
-<p>If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official <a href="https://github.com/mongodb/homebrew-brew">MongoDB Homebrew Tap</a>, skip the prerequisites and go to the <a href="#procedure">Procedure</a> step.</p>
+<p>If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official <a href="https://github.com/mongodb/homebrew-brew" target="_blank">MongoDB Homebrew Tap</a>, skip the prerequisites and go to the <a href="#procedure">Procedure</a> step.</p>
 <h4 id="install-xcode">Install XCode<a class="headerlink" href="#install-xcode" title="Permanent link">&para;</a></h4>
 <p>Apple’s XCode includes command-line tools that are required by brew, and is available for free on the App Store. Make sure you are running the latest version.</p>
 <h4 id="install-homebrew">Install Homebrew<a class="headerlink" href="#install-homebrew" title="Permanent link">&para;</a></h4>
-<p>OSX does not include the Homebrew brew package by default. Install brew using the <a href="https://brew.sh/#install">official instructions</a>.</p>
+<p>OSX does not include the Homebrew brew package by default. Install brew using the <a href="https://brew.sh/#install" target="_blank">official instructions</a>.</p>
 <h4 id="tap-the-mongodb-homebrew-tap">Tap the MongoDB Homebrew Tap<a class="headerlink" href="#tap-the-mongodb-homebrew-tap" title="Permanent link">&para;</a></h4>
-<p>Issue the following from the terminal to tap the official <a href="https://github.com/mongodb/homebrew-brew">MongoDB Homebrew Tap</a>:</p>
+<p>Issue the following from the terminal to tap the official <a href="https://github.com/mongodb/homebrew-brew" target="_blank">MongoDB Homebrew Tap</a>:</p>
 <div class="codehilite"><pre><span></span>brew tap mongodb/brew
 </pre></div>
 
@@ -1373,7 +1373,7 @@
 
 <h3 id="run-mongodb-community-edition_1">Run MongoDB Community Edition<a class="headerlink" href="#run-mongodb-community-edition_1" title="Permanent link">&para;</a></h3>
 <p>Follow these steps to run MongoDB Community Edition. These instructions assume that you are using the default settings.</p>
-<p>You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see <a href="https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings">ulimit settings</a> for more information).</p>
+<p>You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see <a href="https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings" target="_blank">ulimit settings</a> for more information).</p>
 <ul>
 <li>To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:</li>
 </ul>
@@ -1386,7 +1386,7 @@
 <div class="codehilite"><pre><span></span>mongod --config /usr/local/etc/mongod.conf --fork
 </pre></div>
 
-<p>Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own <a href="https://docs.mongodb.com/manual/reference/configuration-options/">MongoDB configuration</a> options to this file as well.</p>
+<p>Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own <a href="https://docs.mongodb.com/manual/reference/configuration-options/" target="_blank">MongoDB configuration</a> options to this file as well.</p>
 <p>To verify that MongoDB is running, search for mongod in your running processes:</p>
 <div class="codehilite"><pre><span></span>ps aux <span class="p">|</span> grep -v grep <span class="p">|</span> grep mongod
 </pre></div>
@@ -1397,21 +1397,21 @@
 <div class="codehilite"><pre><span></span>mongo
 </pre></div>
 
-<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></em></p>
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></em></p>
 <h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
 <h3 id="install-mongodb-community-edition_2">Install MongoDB Community Edition<a class="headerlink" href="#install-mongodb-community-edition_2" title="Permanent link">&para;</a></h3>
 <h4 id="prerequisites_1">Prerequisites<a class="headerlink" href="#prerequisites_1" title="Permanent link">&para;</a></h4>
 <p>Users on Windows versions previous to Windows 10 must install the following update before installing MongoDB:</p>
 <blockquote>
-<p><a href="https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows">Update for Universal C Runtime for Windows</a></p>
+<p><a href="https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows" target="_blank">Update for Universal C Runtime for Windows</a></p>
 </blockquote>
 <p>Users on Windows 10, Server 2016 and Server 2019 do not need this update.</p>
 <h4 id="procedure_1">Procedure<a class="headerlink" href="#procedure_1" title="Permanent link">&para;</a></h4>
-<p>Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default <a href="https://docs.mongodb.com/manual/reference/configuration-options/">configuration file</a> \<install directory>\bin\mongod.cfg.</p>
+<p>Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default <a href="https://docs.mongodb.com/manual/reference/configuration-options/" target="_blank">configuration file</a> \<install directory>\bin\mongod.cfg.</p>
 <ol>
 <li>
 <p><strong>Download MongoDB Community Edition.</strong></p>
-<p>Download the installer (.msi) from the <a href="https://www.mongodb.com/download-center/community?jmp=docs">MongoDB Download Center</a>:  </p>
+<p>Download the installer (.msi) from the <a href="https://www.mongodb.com/download-center/community?jmp=docs" target="_blank">MongoDB Download Center</a>:  </p>
 <ul>
 <li>
 <p>The Download Center should display <strong>MongoDB Community Server</strong> download information. If not, select <strong>Server</strong>, then click the <strong>MongoDB Community Server</strong> tab.  </p>
@@ -1497,7 +1497,7 @@
 <p>If you choose not to configure MongoDB as a Windows service, uncheck the <strong>Install MongoD as a Service</strong>.</p>
 <p><img alt="image of MongoDB Service installation" src="../img/windows-MongoDB.png" /></p>
 <h5 id="c-install-mongodb-compass">c. Install MongoDB Compass<a class="headerlink" href="#c-install-mongodb-compass" title="Permanent link">&para;</a></h5>
-<p>For Windows 8 or greater, you can have the wizard install <a href="https://www.mongodb.com/products/compass">MongoDB Compass</a>. To install Compass, select Install <strong>MongoDB Compass</strong> (Default).</p>
+<p>For Windows 8 or greater, you can have the wizard install <a href="https://www.mongodb.com/products/compass" target="_blank">MongoDB Compass</a>. To install Compass, select Install <strong>MongoDB Compass</strong> (Default).</p>
 <h5 id="d-when-ready-click-install">d. When ready, click <strong>Install.</strong><a class="headerlink" href="#d-when-ready-click-install" title="Permanent link">&para;</a></h5>
 <h4 id="if-you-installed-mongodb-as-a-windows-service">If You Installed MongoDB as a Windows Service<a class="headerlink" href="#if-you-installed-mongodb-as-a-windows-service" title="Permanent link">&para;</a></h4>
 <p>The MongoDB service is started upon successful installation</p>
@@ -1515,7 +1515,7 @@
 
 <h4 id="if-you-did-not-install-mongodb-as-a-windows-service">If You Did Not Install MongoDB as a Windows Service<a class="headerlink" href="#if-you-did-not-install-mongodb-as-a-windows-service" title="Permanent link">&para;</a></h4>
 <p>If you only installed the executables and did not install MongoDB as a Windows service, you must manually start the MongoDB instance.</p>
-<p>See Run <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd">MongoDB Community Edition from the Command Interpreter</a> for instructions to start a MongoDB instance.</p>
+<p>See Run <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd" target="_blank">MongoDB Community Edition from the Command Interpreter</a> for instructions to start a MongoDB instance.</p>
 <h3 id="run-mongodb-community-edition-as-a-windows-service">Run MongoDB Community Edition as a Windows Service<a class="headerlink" href="#run-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h3>
 <p>Starting in version 4.0, you can install and configure MongoDB as a <strong>Windows Service</strong> during the install, and the MongoDB service is started upon successful installation. MongoDB is configured using the configuration file <strong>\<install directory>\bin\mongod.cfg</strong>.</p>
 <h4 id="start-mongodb-community-edition-as-a-windows-service">Start MongoDB Community Edition as a Windows Service<a class="headerlink" href="#start-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h4>
@@ -1535,13 +1535,13 @@
 <li>Right-click on the MongoDB service and click <strong>Stop</strong> (or <strong>Pause</strong>).</li>
 </ol>
 <h4 id="remove-mongodb-community-edition-as-a-windows-service">Remove MongoDB Community Edition as a Windows Service<a class="headerlink" href="#remove-mongodb-community-edition-as-a-windows-service" title="Permanent link">&para;</a></h4>
-<p>To remove the MongoDB service, first use the Services console to stop the service. Then open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) as an <strong>Administrator</strong>, and run the following command:</p>
+<p>To remove the MongoDB service, first use the Services console to stop the service. Then open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd" target="_blank">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) as an <strong>Administrator</strong>, and run the following command:</p>
 <div class="codehilite"><pre><span></span>sc.exe delete MongoDB
 </pre></div>
 
 <h3 id="run-mongodb-community-edition-from-the-command-interpreter">Run MongoDB Community Edition from the Command Interpreter<a class="headerlink" href="#run-mongodb-community-edition-from-the-command-interpreter" title="Permanent link">&para;</a></h3>
-<p>You can run MongoDB Community Edition from the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) instead of as a service.</p>
-<p>Open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) as an <strong>Administrator</strong>.</p>
+<p>You can run MongoDB Community Edition from the <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd" target="_blank">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>) instead of as a service.</p>
+<p>Open a <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">Windows command prompt/interpreter</a> (<strong>cmd.exe</strong>){target=_blank} as an <strong>Administrator</strong>.</p>
 <h3 id="1-create-database-directory">1. Create database directory.<a class="headerlink" href="#1-create-database-directory" title="Permanent link">&para;</a></h3>
 <p>Create the <code>data directory</code> where MongoDB stores data. MongoDB’s default data directory path is the absolute path <strong>\data\db</strong> on the drive from which you start MongoDB.</p>
 <p>From the <strong>Command Interpreter</strong>, create the data directories:</p>
@@ -1564,7 +1564,7 @@ md <span class="s2">&quot;\data\db&quot;</span>
 <div class="codehilite"><pre><span></span><span class="s2">&quot;C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe&quot;</span>
 </pre></div>
 
-<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></em></p>
+<p><em>ref: <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/" target="_blank">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></em></p>
                 
                   
                 
