@@ -45,6 +45,7 @@ nav:
       - Create Data: Create-Data.md
   - User Manual:
       - Flutter User Manual: Flutter-Manual.md
+      - Vue User Manual: Vue-Manual.md
   - API Documentation:
       - Welcome: index.md
       - User Authentication: Authentication.md
