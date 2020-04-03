@@ -19,17 +19,17 @@ When you register, you will be automatically logged in.
 ## History and Favourites
 
 - Tap the favourite or history tab to navigate to the cards page.
-- You can search in the list by texting the search field.
+- You can search in the list using the search field.
 - You can tap the list item to see detail of the user
 - In the detail page, you can quickly remove or favourite/unfavourite the card owner.
-- under the cards, you can click the numbers to change any pages you like.
+- under the cards, you can click the navigation to switch pages.
 
 ## Update or Create Your Own Card Profile
 
 - Tap the profile tab to navigate to the profile page.
-- Here, You can edit your personal information, view your profile image or logout.
-- Once you finished your profile click save button to save your changes or discard button to restore default.
+- Here, You can edit your personal information, view and upload your profile image.
+- Once you finished your profile click save button to save your changes or discard button to restore.
 - You can upload a new profile picture by clicking your profile photo.
 - You must tap save to save any changes.
-- You can change your 3D avatars here.
+- You can change your AR avatars here.
 - You can logout of current account by clicking "log out".
