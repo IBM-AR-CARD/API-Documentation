@@ -1,5 +1,7 @@
 # Vue User Manual
 
+**Application Live at** - [http://ar-card.henryz.cc/app](http://ar-card.henryz.cc/app){target=_blank}
+
 ## Register and Login
 
 You can edit your personal detail and view the history and favorites after login.

@@ -49,7 +49,7 @@ nav:
       - Flutter User Manual: Flutter-Manual.md
       - Vue User Manual: Vue-Manual.md
   - API Documentation:
-      - Welcome: Welcome-API.md
+      - Overview: Welcome-API.md
       - User Authentication: Authentication.md
       - User Profile: Profile-API.md
       - Chat Conversation API: Conversation-API.md
