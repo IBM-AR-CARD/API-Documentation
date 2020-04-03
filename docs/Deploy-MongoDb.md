@@ -8,7 +8,7 @@ Select the operating system on which you are installing MongoDB:
 
 ## Linux
 
-This instruction is for Ubuntu only if your are other than Ubuntu, please follow the instruction from [official website](https://docs.mongodb.com/manual/administration/install-on-linux/)
+This instruction is for Ubuntu only if your are other than Ubuntu, please follow the instruction from [official website](https://docs.mongodb.com/manual/administration/install-on-linux/){target=_blank}
 
 ### Install MongoDB Community Edition
 
@@ -16,7 +16,7 @@ Follow these steps to install MongoDB Community Edition using the apt package ma
 
 #### 1. **Import the public key used by the package management system.**
 
-From a terminal, issue the following command to import the MongoDB public GPG Key from <https://www.mongodb.org/static/pgp/server-4.2.asc>:
+From a terminal, issue the following command to import the MongoDB public GPG Key from <https://www.mongodb.org/static/pgp/server-4.2.asc>{target=_blank}:
 
 ```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
@@ -135,7 +135,7 @@ sudo systemctl restart mongod
 
 You can follow the state of the process for errors or important messages by watching the output in the /var/log/mongodb/mongod.log file.
 
-*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb>*
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/#create-a-list-file-for-mongodb>{target=_blank}*
 
 ## macOS
 
@@ -143,7 +143,7 @@ You can follow the state of the process for errors or important messages by watc
 
 #### Prerequisites
 
-If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew), skip the prerequisites and go to the [Procedure](#procedure) step.
+If you have the Homebrew brew package installed on your OSX host and you have previously tapped the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew){target=_blank}, skip the prerequisites and go to the [Procedure](#procedure) step.
 
 #### Install XCode
 
@@ -151,11 +151,11 @@ Apple’s XCode includes command-line tools that are required by brew, and is av
 
 #### Install Homebrew
 
-OSX does not include the Homebrew brew package by default. Install brew using the [official instructions](https://brew.sh/#install).
+OSX does not include the Homebrew brew package by default. Install brew using the [official instructions](https://brew.sh/#install){target=_blank}.
 
 #### Tap the MongoDB Homebrew Tap
 
-Issue the following from the terminal to tap the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew):
+Issue the following from the terminal to tap the official [MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew){target=_blank}:
 
 ```bash
 brew tap mongodb/brew
@@ -175,7 +175,7 @@ brew install mongodb-community@4.2
 
 Follow these steps to run MongoDB Community Edition. These instructions assume that you are using the default settings.
 
-You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see [ulimit settings](https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings) for more information).
+You can run MongoDB as a macOS service using brew, or you can run MongoDB manually as a background process. It is recommended to run MongoDB as a macOS service, as doing so sets the correct system ulimit values automatically (see [ulimit settings](https://docs.mongodb.com/manual/reference/ulimit/#ulimit-settings){target=_blank} for more information).
 
 + To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
 
@@ -189,7 +189,7 @@ You can run MongoDB as a macOS service using brew, or you can run MongoDB manual
   mongod --config /usr/local/etc/mongod.conf --fork
   ```
 
-Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own [MongoDB configuration](https://docs.mongodb.com/manual/reference/configuration-options/) options to this file as well.
+Both methods use the /usr/local/etc/mongod.conf file created during the install. You can add your own [MongoDB configuration](https://docs.mongodb.com/manual/reference/configuration-options/){target=_blank} options to this file as well.
 
 To verify that MongoDB is running, search for mongod in your running processes:
 
@@ -207,7 +207,7 @@ To begin using MongoDB, connect a mongo shell to the running instance. From a ne
 mongo
 ```
 
-*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/>*
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/>{target=_blank}*
 
 ## Windows
 
@@ -217,17 +217,17 @@ mongo
 
 Users on Windows versions previous to Windows 10 must install the following update before installing MongoDB:
 
-> [Update for Universal C Runtime for Windows](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)
+> [Update for Universal C Runtime for Windows](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows){target=_blank}
 
 Users on Windows 10, Server 2016 and Server 2019 do not need this update.
 
 #### Procedure
 
-Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default [configuration file](https://docs.mongodb.com/manual/reference/configuration-options/) \<install directory>\bin\mongod.cfg.
+Follow these steps to install MongoDB Community Edition using the MongoDB Installer wizard. The installation process installs both the MongoDB binaries as well as the default [configuration file](https://docs.mongodb.com/manual/reference/configuration-options/){target=_blank} \<install directory>\bin\mongod.cfg.
 
 1. **Download MongoDB Community Edition.**
 
-    Download the installer (.msi) from the [MongoDB Download Center](https://www.mongodb.com/download-center/community?jmp=docs):  
+    Download the installer (.msi) from the [MongoDB Download Center](https://www.mongodb.com/download-center/community?jmp=docs){target=_blank}:  
 
     + The Download Center should display **MongoDB Community Server** download information. If not, select **Server**, then click the **MongoDB Community Server** tab.  
 
@@ -303,7 +303,7 @@ If you choose not to configure MongoDB as a Windows service, uncheck the **Insta
 
 ##### c. Install MongoDB Compass
 
-For Windows 8 or greater, you can have the wizard install [MongoDB Compass](https://www.mongodb.com/products/compass). To install Compass, select Install **MongoDB Compass** (Default).
+For Windows 8 or greater, you can have the wizard install [MongoDB Compass](https://www.mongodb.com/products/compass){target=_blank}. To install Compass, select Install **MongoDB Compass** (Default).
 
 ##### d. When ready, click **Install.**
 
@@ -325,7 +325,7 @@ To begin using MongoDB, connect a `mongo.exe` shell to the running MongoDB insta
 
 If you only installed the executables and did not install MongoDB as a Windows service, you must manually start the MongoDB instance.
 
-See Run [MongoDB Community Edition from the Command Interpreter](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd) for instructions to start a MongoDB instance.
+See Run [MongoDB Community Edition from the Command Interpreter](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#run-mongodb-from-cmd){target=_blank} for instructions to start a MongoDB instance.
 
 ### Run MongoDB Community Edition as a Windows Service
 
@@ -353,7 +353,7 @@ To stop/pause the MongoDB service, use the Services console:
 
 #### Remove MongoDB Community Edition as a Windows Service
 
-To remove the MongoDB service, first use the Services console to stop the service. Then open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) as an **Administrator**, and run the following command:
+To remove the MongoDB service, first use the Services console to stop the service. Then open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd){target=_blank} (**cmd.exe**) as an **Administrator**, and run the following command:
 
 ```bash
 sc.exe delete MongoDB
@@ -361,9 +361,9 @@ sc.exe delete MongoDB
 
 ### Run MongoDB Community Edition from the Command Interpreter
 
-You can run MongoDB Community Edition from the [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) instead of as a service.
+You can run MongoDB Community Edition from the [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd){target=_blank} (**cmd.exe**) instead of as a service.
 
-Open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**) as an **Administrator**.
+Open a [Windows command prompt/interpreter](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd) (**cmd.exe**){target=_blank} as an **Administrator**.
 
 ### 1. Create database directory.
 
@@ -398,4 +398,4 @@ To connect a `mongo.exe` shell to the MongoDB instance, open another **Command I
 "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
 ```
 
-*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/>*
+*ref: <https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/>{target=_blank}*

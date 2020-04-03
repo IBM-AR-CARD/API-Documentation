@@ -2,7 +2,7 @@
 
 ## Overview
 
-We uses [JWT (Json Web Token)](https://jwt.io/) for user login and authentications. 
+We uses [JWT (Json Web Token)](https://jwt.io/){target=_blank} for user login and authentications. 
 
 A JWT token will be assigned to the 
 client after the login request, the token is persistent unless the user log out manually. The token will be stored in 

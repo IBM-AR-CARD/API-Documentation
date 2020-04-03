@@ -35,6 +35,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - attr_list
 
 nav:
   - Welcome: index.md

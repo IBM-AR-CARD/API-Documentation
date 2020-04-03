@@ -10,7 +10,7 @@ Select the operating system on which you are installing Flutter:
 
 ### **Windows**
 
-Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=windows)
+Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=windows){target=_blank}
 
 #### **Update your path**
 
@@ -25,7 +25,7 @@ Note that you have to close and reopen any existing console windows for these ch
 
 ### **macOs**
 
-Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=macos)
+Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=macos){target=_blank}
 
 #### **Update your path**  
 
@@ -55,7 +55,7 @@ Add the flutter tool to your path:
 
 ### **Linux**
 
-Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=linux)
+Download the latest [flutter SDK](https://flutter.dev/docs/development/tools/sdk/releases?tab=linux){target=_blank}
 
 #### **Update your path**
 
@@ -107,7 +107,7 @@ The following sections describe how to perform these tasks and finish the setup 
 
 ## Install Android Studio
 
-1. Download and install [Android Studio](https://developer.android.com/studio).
+1. Download and install [Android Studio](https://developer.android.com/studio){target=_blank}.
 
 2. Start Android Studio, and go through the ‘Android Studio Setup Wizard’. This installs the latest Android SDK, Android SDK Command-line Tools, and Android SDK Build-Tools, which are required by Flutter when developing for Android.
 
@@ -115,9 +115,9 @@ The following sections describe how to perform these tasks and finish the setup 
 
 To prepare to run and test your Flutter app on an Android device, you’ll need an Android device running Android 4.1 (API level 16) or higher.
 
-1. Enable Developer options and USB debugging on your device. Detailed instructions are available in the [Android documentation](https://developer.android.com/studio/debug/dev-options).
+1. Enable Developer options and USB debugging on your device. Detailed instructions are available in the [Android documentation](https://developer.android.com/studio/debug/dev-options){target=_blank}.
 
-2. Windows-only: Install the [Google USB Driver](https://developer.android.com/studio/run/win-usb).
+2. Windows-only: Install the [Google USB Driver](https://developer.android.com/studio/run/win-usb){target=_blank}.
 
 3. Using a USB cable, plug your phone into your computer. If prompted on your device, authorize your computer to access your device.
 
@@ -173,4 +173,4 @@ if success you will see the follow output:
 
 which specifies the location of the application. 
 
-*Instruction reference from <https://flutter.dev/docs/get-started/install>*
+*Instruction reference from <https://flutter.dev/docs/get-started/install>{target=_blank}*
