@@ -40,7 +40,7 @@
     
     
       
-        <title>File Upload - Appendices and Documentation</title>
+        <title>Vue User Manual - Appendices and Documentation</title>
       
     
     
@@ -116,7 +116,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#file-upload-api" tabindex="1" class="md-skip">
+      <a href="#vue-user-manual" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                File Upload
+                Vue User Manual
               
             </span>
           
@@ -347,10 +347,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       User Manual
@@ -378,11 +380,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Vue-Manual/" title="Vue User Manual" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Vue User Manual
+      </label>
+    
+    <a href="./" title="Vue User Manual" class="md-nav__link md-nav__link--active">
       Vue User Manual
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#register-and-login" title="Register and Login" class="md-nav__link">
+    Register and Login
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history-and-favourites" title="History and Favourites" class="md-nav__link">
+    History and Favourites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-or-create-your-own-card-profile" title="Update or Create Your Own Card Profile" class="md-nav__link">
+    Update or Create Your Own Card Profile
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -395,12 +449,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       API Documentation
@@ -488,69 +540,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        File Upload
-      </label>
-    
-    <a href="./" title="File Upload" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../File-Upload/" title="File Upload" class="md-nav__link">
       File Upload
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#file-upload" title="File upload" class="md-nav__link">
-    File upload
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-upload" title="POST - /upload" class="md-nav__link">
-    POST - /upload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#standard-file-names" title="Standard file names" class="md-nav__link">
-    Standard file names
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -580,28 +574,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-upload" title="File upload" class="md-nav__link">
-    File upload
+  <a href="#register-and-login" title="Register and Login" class="md-nav__link">
+    Register and Login
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#post-upload" title="POST - /upload" class="md-nav__link">
-    POST - /upload
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-file-names" title="Standard file names" class="md-nav__link">
-    Standard file names
+  <a href="#history-and-favourites" title="History and Favourites" class="md-nav__link">
+    History and Favourites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-or-create-your-own-card-profile" title="Update or Create Your Own Card Profile" class="md-nav__link">
+    Update or Create Your Own Card Profile
   </a>
   
 </li>
@@ -622,128 +610,59 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/IBM-AR-CARD/API-Documentation/edit/master/docs/File-Upload.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/IBM-AR-CARD/API-Documentation/edit/master/docs/Vue-Manual.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="file-upload-api">File Upload API<a class="headerlink" href="#file-upload-api" title="Permanent link">&para;</a></h1>
-<h2 id="file-upload">File upload<a class="headerlink" href="#file-upload" title="Permanent link">&para;</a></h2>
-<h3 id="post-upload"><code>POST</code> - /upload<a class="headerlink" href="#post-upload" title="Permanent link">&para;</a></h3>
-<p>Upload image or audio file into the backend server. The file will be stored in the user's respective folder. Please name the filename carefully before upload, as this will be the file name stored on the server, file with the same name uploaded by the same user will be overwritten.</p>
-<div class="admonition warning">
-<p class="admonition-title">Authorization</p>
-<p>JWT Token inside request header, with key <code>Authorization</code> and value <code>Bearer &lt;JWT-Token&gt;</code></p>
-</div>
-<p><strong>Request Body</strong>: </p>
-<p>Please put the raw file into the request body with key <code>file</code>.</p>
+                <h1 id="vue-user-manual">Vue User Manual<a class="headerlink" href="#vue-user-manual" title="Permanent link">&para;</a></h1>
+<h2 id="register-and-login">Register and Login<a class="headerlink" href="#register-and-login" title="Permanent link">&para;</a></h2>
+<p>You can edit your personal detail and view the history and favorites after login.</p>
+<p>If you haven't get account yet, in the login page, click the register button will redirect you to the register section. You can now create your account or using demo account.</p>
+<p>You can use the demo account listed below:</p>
 <table>
 <thead>
 <tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-<th>Constraints</th>
-<th>Default</th>
-<th>Required</th>
+<th>Username</th>
+<th>Email</th>
+<th>Password</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>file</code></td>
-<td><code>File</code></td>
-<td>Raw File</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>Yes</td>
+<td><code>jonmcnamara</code></td>
+<td><code>john@ucl.ac.uk</code></td>
+<td><code>password</code></td>
+</tr>
+<tr>
+<td><code>amy-pajak</code></td>
+<td><code>amy@ucl.ac.uk</code></td>
+<td><code>password</code></td>
+</tr>
+<tr>
+<td><code>ben-jones</code></td>
+<td><code>ben@ucl.ac.uk</code></td>
+<td><code>password</code></td>
 </tr>
 </tbody>
 </table>
-<hr />
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>The file can be upload.</p>
-<p><strong>Status Code</strong>: <code>200 OK</code></p>
-<p><strong>Response Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;success&quot;</span><span class="p">:</span> <span class="s2">&quot;file uploaded&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Uploaded file URL&gt;&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>success</code></td>
-<td><code>string</code></td>
-<td>Success message</td>
-</tr>
-<tr>
-<td><code>path</code></td>
-<td><code>string</code></td>
-<td>Uploaded file URL</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Bad Request</p>
-<p><strong>Status Code</strong>: <code>400 Bad Request</code></p>
-<p><strong>Response Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Error message&gt;&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-<div class="admonition failure">
-<p class="admonition-title">Unauthorized</p>
-<p><strong>Status Code</strong>: <code>401 Unauthorized</code></p>
-<p><strong>Response Body</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;You are not authorized to access this resource&quot;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-<h2 id="standard-file-names">Standard file names<a class="headerlink" href="#standard-file-names" title="Permanent link">&para;</a></h2>
-<p>The following are the example file names of common files shared between the client and the server.</p>
-<table>
-<thead>
-<tr>
-<th>File name</th>
-<th>Description</th>
-<th>File type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>profile.png</code></td>
-<td><code>Image for user's profile picture</code></td>
-<td><code>png</code></td>
-</tr>
-<tr>
-<td><code>education.mp3</code></td>
-<td><code>User's recording file for their education section</code></td>
-<td><code>mp3</code></td>
-</tr>
-<tr>
-<td><code>description.mp3</code></td>
-<td><code>User's recording file for their one sentence description section</code></td>
-<td><code>mp3</code></td>
-</tr>
-<tr>
-<td><code>work-experience.mp3</code></td>
-<td><code>User's recording file for their work experiences section</code></td>
-<td><code>mp3</code></td>
-</tr>
-</tbody>
-</table>
+<p>When you register, you will be automatically logged in.</p>
+<h2 id="history-and-favourites">History and Favourites<a class="headerlink" href="#history-and-favourites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tap the favourite or history tab to navigate to the cards page.</li>
+<li>You can search in the list using the search field.</li>
+<li>You can tap the list item to see detail of the user</li>
+<li>In the detail page, you can quickly remove or favourite/unfavourite the card owner.</li>
+<li>under the cards, you can click the navigation to switch pages.</li>
+</ul>
+<h2 id="update-or-create-your-own-card-profile">Update or Create Your Own Card Profile<a class="headerlink" href="#update-or-create-your-own-card-profile" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tap the profile tab to navigate to the profile page.</li>
+<li>Here, You can edit your personal information, view and upload your profile image.</li>
+<li>Once you finished your profile click save button to save your changes or discard button to restore.</li>
+<li>You can upload a new profile picture by clicking your profile photo.</li>
+<li>You must tap save to save any changes.</li>
+<li>You can change your AR avatars here.</li>
+<li>You can logout of current account by clicking "log out".</li>
+</ul>
                 
                   
                 
@@ -764,7 +683,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Favorite-API/" title="User Favourite Cards" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Flutter-Manual/" title="Flutter User Manual" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -773,11 +692,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                User Favourite Cards
+                Flutter User Manual
               </span>
             </div>
           </a>
         
+        
+          <a href="../Welcome-API/" title="Welcome" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Welcome
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
