@@ -7,7 +7,10 @@ Welcome to IBM AR Business Card's Appendices and Documentation. Here are a list 
 - [Deployment Manual](Deploy-Flutter/)
 - [User Manual](Flutter-Manual/)
 - [API Documentation](Welcome-API/)
+- [Bi-Weekly Reports and Demo Card Downloads](Downloads/)
 
+---
+[View this documentation in a new tab](https://ibm-ar-card.github.io/API-Documentation/){target=_blank}
 
 ## Download or View the Application
 
