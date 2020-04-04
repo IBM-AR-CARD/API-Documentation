@@ -9,7 +9,7 @@ To demostrate the use of AR and QR code scanning, you can download the following
 
 ## Download or View the Application
 
-**Flutter Mobile App** -  [Download for Android (*.apk)](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases/download/v1.0/app.apk){target=_blank} - [More Releases](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases){target=_blank}
+**Flutter Mobile App** -  [Download for Android (*.apk)](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases/download/v1.0/app.apk){target=_blank} - [More Releases](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases){target=_blank} - [Alternative onedrive link](https://bit.ly/AR-Card){target=_blank}
 
 
 
@@ -19,7 +19,7 @@ You can view and interact with AR avatars even without login. However, to have t
 
 If you are not logged in, in the main page, tap either list or profile button will redirect you to the login page. You can now create your account or loggin to existing account. 
 
-You can use the demo account listed below: 
+You can use the demo accounts listed below (use email and password to login):
 
 | Username      | Email            | Password   |
 | ------------- | ---------------- | ---------- |

@@ -8,7 +8,7 @@ You can edit your personal detail and view the history and favorites after login
 
 If you haven't get account yet, in the login page, click the register button will redirect you to the register section. You can now create your account or using demo account.
 
-You can use the demo account listed below:
+You can use the demo accounts listed below (use email and password to login):
 
 | Username      | Email            | Password   |
 | ------------- | ---------------- | ---------- |
