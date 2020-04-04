@@ -162,7 +162,7 @@ flutter pub get
 To build the project into apk:
 
 ```bash
-flutter build apk
+flutter build apk --profile
 ```  
 
 if success you will see the follow output:
