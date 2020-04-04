@@ -7,14 +7,14 @@ Welcome to IBM AR Business Card's Appendices and Documentation. Here are a list 
 - [Deployment Manual](Deploy-Flutter/)
 - [User Manual](Flutter-Manual/)
 - [API Documentation](Welcome-API/)
-- [Bi-Weekly Reports and Demo Card Downloads](Downloads/)
+- [Bi-Weekly Reports and Demo Card Downloads](Reports-And-Downloads/)
 
 ---
 [View this documentation in a new tab](https://ibm-ar-card.github.io/API-Documentation/){target=_blank}
 
 ## Download or View the Application
 
-**Flutter Mobile App** -  [Download apk for Android](){target=_blank}
+**Flutter Mobile App** -  [Download for Android (*.apk)](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases/download/v1.0/app.apk){target=_blank} - [More Releases](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases){target=_blank}
 
 **Vue Web Dashboard** - [http://ar-card.henryz.cc/app](http://ar-card.henryz.cc/app){target=_blank}
 

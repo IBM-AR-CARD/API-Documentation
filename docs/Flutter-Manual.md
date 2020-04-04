@@ -1,5 +1,18 @@
 # Flutter User Manual
 
+## Business Card and Image target Demo
+
+To demostrate the use of AR and QR code scanning, you can download the following image target. You could print them out as business cards, or display them on another device (such as iPad or another phone).
+
+[Download the demo for printing (pdf)](downloads/image_target.pdf){target=_blank}
+
+
+## Download or View the Application
+
+**Flutter Mobile App** -  [Download for Android (*.apk)](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases/download/v1.0/app.apk){target=_blank} - [More Releases](https://github.com/IBM-AR-CARD/Flutter-AR-Mobile-App/releases){target=_blank}
+
+
+
 ## Register and Login
 
 You can view and interact with AR avatars even without login. However, to have the best user experiences, you should register or login before use.
