@@ -39,15 +39,15 @@ markdown_extensions:
 
 nav:
   - Welcome: index.md
+  - User Manual:
+      - Flutter User Manual: Flutter-Manual.md
+      - Vue User Manual: Vue-Manual.md
   - Deployment Manual:
       - Deploy Flutter: Deploy-Flutter.md
       - Deploy Vue: Deploy-Vue.md
       - Deploy MongoDB: Deploy-MongoDb.md
       - Deploy Express: Deploy-Express.md
       - Create Data: Create-Data.md
-  - User Manual:
-      - Flutter User Manual: Flutter-Manual.md
-      - Vue User Manual: Vue-Manual.md
   - API Documentation:
       - Overview: Welcome-API.md
       - User Authentication: Authentication.md

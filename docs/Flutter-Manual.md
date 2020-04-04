@@ -43,12 +43,15 @@ You should see three popup asking for camera, microphone and storage permissions
 ## View Avatar
 
 - In the QR code scanning page, scan the QR code on your business card. Or tap "demo" to view the demo card.
+
+![QR](img/qr.png)
   
 !!! info
     If you do not own an AR business card, you can download it in the Files section of this documentation. 
 
 - You should now enter the AR page. Follow the instruction and scan the back of the business card, you should now see an AR avatar on top of the physical card.
 
+![QR](img/ar.png)
 
 - You can switch between the AR scene and the 3D non-AR scene by toggling the AR button.
 - You can see the user profile page by tapping the profile picture.
@@ -71,6 +74,9 @@ You should see three popup asking for camera, microphone and storage permissions
 
 
 ## History and Favourites
+
+![QR](img/list.png)
+
 - Tap the favourite icon to favourite a user or card
 - In the scanning or AR page, tap the list icon (bottom left) to open history list
 - You will see a history of scanned card
@@ -85,6 +91,10 @@ You should see three popup asking for camera, microphone and storage permissions
 
 
 ## Update or Create Your Own Card Profile
+
+
+![QR](img/profile.png)
+
 - In the scanning or AR page, tap the user icon (bottom right) to open your profile
 - Here, You can edit your personal information, view your own avatar, download your QR code, or logout.
 - You can upload a new profile picture and crop it by clicking your profile photo.
