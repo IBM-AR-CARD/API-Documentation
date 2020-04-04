@@ -40,6 +40,8 @@ You can use the demo accounts listed below (use email and password to login):
 
 ## Business Card and Image target Demo
 
+![target](img/target.png)
+
 To demonstrate the use of AR and QR code scanning, you can download the following image target. You could print them out as business cards, or display them on another device (such as iPad or another phone). The file contain the QR code and business card dummy for the 3 demo users.
 
 [Download the demo for printing (pdf)](downloads/image_target.pdf){target=_blank}

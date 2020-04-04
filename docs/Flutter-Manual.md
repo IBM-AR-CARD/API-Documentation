@@ -50,6 +50,7 @@ You should see three popup asking for camera, microphone and storage permissions
     If you do not own an AR business card, you can download it in the Files section of this documentation. 
 
 - You should now enter the AR page. Follow the instruction and scan the back of the business card, you should now see an AR avatar on top of the physical card.
+- If you don't have a phsycial business card for AR tracking, [click here to download](../Reports-And-Downloads/#business-card-and-image-target-demo)
 
 ![QR](img/ar.png)
 
