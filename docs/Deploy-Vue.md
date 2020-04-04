@@ -2,7 +2,7 @@
 
 ## Download Node and Npm
 
-Download your prefer version of [Node.js](https://nodejs.org/en/)
+Download your prefer version of [Node.js](https://nodejs.org/en/){target=_blank}
 
 ## Check that you have node and npm installed
 
@@ -22,7 +22,7 @@ npm -v
 
 follow the instruction to install latest version of yarn:
 
-<https://classic.yarnpkg.com/en/docs/install>
+<https://classic.yarnpkg.com/en/docs/install>{target=_blank}
 
 Test that Yarn is installed by running:
 

@@ -1,22 +1,28 @@
-# Welcome to IBM AR Card
+# IBM AR Business Card
 
-Welcome to IBM AR Business Card's backend documentation. The backend app is built using:
+## Welcome
 
-- [Node.js](https://nodejs.org/en/) + [Express.js](https://expressjs.com/)
-- [MongoDB](https://mongodb.com/)
+Welcome to IBM AR Business Card's Appendices and Documentation. Here are a list of shortcuts:
 
-We are using cloud services include:
+- [Deployment Manual](Deploy-Flutter/)
+- [User Manual](Flutter-Manual/)
+- [API Documentation](Welcome-API/)
+- [Bi-Weekly Reports and Demo Card Downloads](Downloads/)
 
-- [IBM Cloud](https://cloud.ibm.com/) provided by our client
-- [Watson Assistant](https://cloud.ibm.com/)
-- [Azure](https://azure.com) provided by UCL
+---
+[View this documentation in a new tab](https://ibm-ar-card.github.io/API-Documentation/){target=_blank}
 
-!!! tip "Source Code"
-    Source code for IBM AR Card API available at [IBM-AR-CARD/Backend-API](https://github.com/IBM-AR-CARD/Backend-API/).
+## Download or View the Application
 
-<!-- ## Backend App layout
+**Flutter Mobile App** -  [Download apk for Android](){target=_blank}
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files. -->
+**Vue Web Dashboard** - [http://ar-card.henryz.cc/app](http://ar-card.henryz.cc/app){target=_blank}
+
+
+## Useful Links
+
+**Backend Server Address** -  [http://ar-card.henryz.cc:8080](http://ar-card.henryz.cc:8080){target=_blank}
+
+**MongoDB Management** - [Mongo Express (8888)](http://ar-card.henryz.cc:8888/){target=_blank}
+
+**Github Repositories** - [https://github.com/IBM-AR-CARD](https://github.com/IBM-AR-CARD){target=_blank}

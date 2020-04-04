@@ -6,7 +6,7 @@ If you already install Node.js please jump to [Clone from Github](#clone-from-gi
 
 ### Download Node and Npm
 
-Download your prefer version of [Node.js](https://nodejs.org/en/)
+Download your prefer version of [Node.js](https://nodejs.org/en/){target=_blank}
 
 ### Check that you have node and npm installed
 

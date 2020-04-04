@@ -35,8 +35,10 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - attr_list
 
 nav:
+  - Welcome: index.md
   - Deployment Manual:
       - Deploy Flutter: Deploy-Flutter.md
       - Deploy Vue: Deploy-Vue.md
@@ -47,13 +49,14 @@ nav:
       - Flutter User Manual: Flutter-Manual.md
       - Vue User Manual: Vue-Manual.md
   - API Documentation:
-      - Welcome: index.md
+      - Overview: Welcome-API.md
       - User Authentication: Authentication.md
       - User Profile: Profile-API.md
       - Chat Conversation API: Conversation-API.md
       - User History Cards: History-API.md
       - User Favourite Cards: Favorite-API.md
       - File Upload: File-Upload.md
+  - Reports and Downloads: Downloads.md
 
 extra_css:
   - "stylesheets/style.css"
